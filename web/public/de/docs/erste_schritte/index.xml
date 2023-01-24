@@ -1,0 +1,415 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pyMANGA – Erste Schritte mit pyMANGA</title>
+    <link>https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/</link>
+    <description>Recent content in Erste Schritte mit pyMANGA on pyMANGA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Installation von pyMANGA</title>
+      <link>https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/</guid>
+      <description>
+        
+        
+        &lt;head&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+&lt;!--
+details summary {color: white; background: #00305E; margin-bottom: 1em;}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;p&gt;Die Software &lt;strong&gt;pyMANGA&lt;/strong&gt; stellt eine Kopplung zwischen einem Baumwachstums- und einem Grundwassermodellierungsprogramm dar.
+Für die Modellierung des Pflanzenwachstums findet die Software &lt;strong&gt;Bettina&lt;/strong&gt; und für die Modellierung des Grundwassers die Software &lt;a href=&#34;https://www.opengeosys.org/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;OpenGeoSys&lt;/strong&gt;&lt;/a&gt; Anwendung.&lt;/p&gt;
+&lt;p&gt;Da das Baumwachstumsmodell und die Kopplung zwischen den beiden Programmen in &lt;strong&gt;Python&lt;/strong&gt; geschrieben sind, wird zur Ausführung des Programms &lt;strong&gt;pyMANGA&lt;/strong&gt; ein &lt;strong&gt;Python-Compiler&lt;/strong&gt; benötigt.
+Bei der Installation wird eine lokale Bibliothek mit verschiedenen &lt;strong&gt;Python-Modulen&lt;/strong&gt; auf Ihrem Rechner installiert.
+Diese Module beinhalten aufwendig zu formulierenden oder häufig gebrauchten Quellcode - somit muss dieser im Programm nicht ausformuliert geschrieben werden, sondern kann einfach aus der Bibliothek abgerufen werden.
+Da sich die Installation zwischen den Betriebssystem unterscheidet, wählen Sie nachfolgend Ihr Betriebssystem aus.&lt;/p&gt;
+&lt;p&gt;Um &lt;strong&gt;pyMANGA&lt;/strong&gt; (Mangrove groundwater salinity feedback model) ausführen zu können, muss eine &lt;strong&gt;Python 3-Distribution&lt;/strong&gt; installiert sein.
+Da sich die Systemvoraussetzungen zwischen den verschiedenen Betriebssystemen stark unterscheiden, wird die Installation für jedes Betriebssystem separat beschrieben.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Installation von Python in Ubuntu&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu 18.04&lt;/strong&gt; liefert eine erste Installation von (&lt;strong&gt;Python 2&lt;/strong&gt; und) &lt;strong&gt;Python 3&lt;/strong&gt; von Haus aus mit.
+Um zu überprüfen welche Version sich aktuell auf dem Rechner befindet, kann, nachdem ein neues Terminal-Fenster mit der Tastenkombination &lt;strong&gt;&amp;ldquo;STRG + Alt + T&amp;rdquo;&lt;/strong&gt; geöffnet wurde, eine Versionsabfrage mit dem Kommando&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• python3 -V 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;erfolgen.
+Es wird empfohlen das Paketverzeichnis des Betriebssystems zunächst zu updaten.
+Um die Version auf den neuesten Stand zu bringen, kann über die Kommandos&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• sudo apt update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;und&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• sudo apt -y upgrade 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;das gesamte System geupdated werden - und damit auch das &lt;strong&gt;Python 3&lt;/strong&gt;-Paket.
+Die aktualliesierte Version kann erneut über&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• python3 -V
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;eingesehen werden.&lt;/p&gt;
+&lt;p&gt;Falls widererwartens Probleme auftreten, kann über den Befehl&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• sudo apt-get install python3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;das Paket (neu)installiert werden.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Installation von Python in Windows&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Um &lt;strong&gt;pyMANGA&lt;/strong&gt; (Mangrove groundwater salinity feedback model) ausführen zu können, müssen Sie zunächst sich ein &lt;strong&gt;Interpreter&lt;/strong&gt; für die Programmiersprache &lt;strong&gt;Python&lt;/strong&gt; besorgen.
+Ein Beispiel wäre &lt;strong&gt;python&lt;sup&gt;T&lt;/sup&gt;&lt;sup&gt;M&lt;/sup&gt;&lt;/strong&gt;.
+Dazu öffnen Sie Ihren &lt;strong&gt;Browser&lt;/strong&gt; und gehen Sie auf die Seite &lt;em&gt;&lt;strong&gt;Python.org&lt;/strong&gt;&lt;/em&gt;.
+Im Auswahlmenü unter &lt;em&gt;&lt;strong&gt;Download&lt;/strong&gt;&lt;/em&gt; finden Sie die aktuelle Release Version für ihr Betriebssystem von &lt;strong&gt;Python&lt;/strong&gt; (in dieser Anleitung wird das Vorgehen unter Windows beschrieben, siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_1&#34;&gt;Abbildung 1&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_1&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/download_python_windows_1.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 1:&lt;/b&gt; Auswahl Menü zum Downloaden der Windows Variante von python&lt;sup&gt;T&lt;/sup&gt;&lt;sup&gt;M&lt;/sup&gt;.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_2&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/download_python_windows_2.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 2:&lt;/b&gt; zu wählender Link für das Downloaden von python-3.7.7.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Führen Sie die herunter geladene Datei (&lt;em&gt;&lt;strong&gt;python-3.7.7-amd64.exe&lt;/strong&gt;&lt;/em&gt;) aus, wie eine normale &lt;strong&gt;Windows&lt;/strong&gt; &lt;strong&gt;exe&lt;/strong&gt; und installieren Sie sie auf Ihren Rechner &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_3&#34;&gt;Abbildung 3&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_3&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/installation_python_windows.jpg.jpg&#34; alt=&#34;Abbildung 3&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 3:&lt;/b&gt; Ausführung der Windows exe von Python 3.7.7.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Damit ist die Installation von &lt;strong&gt;Python&lt;/strong&gt; abgeschlossen.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Nachdem Sie Python auf Ihrem Rechner eingerichtet haben, wird im nächsten Schritt pyMANGA installiert.
+Dies können Sie entweder durch Klonen des &lt;a href=&#34;https://github.com/jbathmann/pyMANGA/&#34; title=&#34;https://github.com/jbathmann/pyMANGA/&#34;&gt;git-repositories&lt;/a&gt; (Für Fortgeschrittene) oder durch Befolgen der nachfolgenden Anleitung erreichen.&lt;/p&gt;
+&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Installation von pyMANGA in Ubuntu &lt;a name=&#34;Installation_Ubuntu&#34;&gt;&lt;/a&gt;&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Um &lt;strong&gt;pyMANGA&lt;/strong&gt; ausführen zu können, müssen ggf. noch nicht in der &lt;strong&gt;Python-Bibliothek&lt;/strong&gt; vorhandene, aber von &lt;strong&gt;pyMANGA&lt;/strong&gt; benötigte Module installiert werden.
+Da bei &lt;strong&gt;Ubuntu&lt;/strong&gt; auch im Betriebssystem &lt;strong&gt;Python&lt;/strong&gt; eine wichtige Rolle spielt, ist die bereits vorinstallierte Bibliothek sehr umfangreich.
+Es wird deshalb empfohlen das Programm zunächst zu installieren und ggf. noch fehlende Module nach erster Ausführung des Programms zu installieren - &lt;strong&gt;pyMANGA&lt;/strong&gt; weist sie darauf hin, welche Module benötigt werden.&lt;/p&gt;
+&lt;p&gt;Um die Software zu downloaden laden Sie sich die aktuelle Version als zip-Datei über diese &lt;a href=&#34;https://github.com/jbathmann/pyMANGA/&#34; title=&#34;https://github.com/jbathmann/pyMANGA/&#34;&gt;Homepage&lt;/a&gt; herunter.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_4&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/download_pymanga_ubuntu.png&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 4:&lt;/b&gt; Download von &lt;b&gt;pyMANGA&lt;/b&gt; als zip-Datei&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Diese zip-Datei muss nun an einem beliebigem Speicherort entpackt werden.
+Achten Sie darauf, dass sich keine Leerzeichen und keine Umlaute in dem Dateifpad befinden.&lt;/p&gt;
+&lt;p&gt;Das Programm ist jetzt ausführbar.
+Öffnen Sie mit der Tastenkombination &lt;strong&gt;Strg + Alt + T&lt;/strong&gt; ein Terminalfenster und navigieren Sie in die Hauptebene des Programms.
+Alternativ können Sie auch den grafischen Weg wählen, indem Sie über Dateien zu dem Speicherort navigieren.
+Dort können Sie die Konsole über einen Rechtsklick und in dem sich öffnenden Menü über das Feld &amp;ldquo;In Terminal öffnen&amp;rdquo; ein Terminalfenster öffnen, indem Sie sich bereits in der Hauptebene des Programms befinden.&lt;/p&gt;
+&lt;p&gt;Durch die Eingabe&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• python3 main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;wird das Programm nun gestartet.
+Falls &lt;strong&gt;pyMANGA&lt;/strong&gt; aufgrund von fehlenden Modulen in der lokalen &lt;strong&gt;Python-Bibliothek&lt;/strong&gt; - wie zu Anfang erwähnt - noch nicht ausgeführt werden kann, wird jeweils eines der fehlenden Pakete in einer Fehlermeldung ausgegeben.
+Für die Installation von Python-Modulen eignet sich unter anderem &lt;strong&gt;pip&lt;/strong&gt; (&amp;ldquo;Pip installs Python&amp;rdquo;).
+Durch das öffnen eines Terminalfenster (Tastenkombination &lt;strong&gt;Strg + Alt + T&lt;/strong&gt;) und der Eingabe des Befehls&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• sudo apt-get install python3-pip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;lässt sich pip installieren.&lt;/p&gt;
+&lt;p&gt;Um mit pip nun ein &lt;strong&gt;Python-Modul&lt;/strong&gt; in die Bibliothek hinzuzufügen muss folgender Befehl in ein Terminal eingegeben werden:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• pip3 install Name_des_Moduls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sollten keine manuellen Veränderungen an der Standard-Python-Bibliothek vorgenommen worden sein, fehlen die Module &amp;ldquo;numpy&amp;rdquo;, &amp;ldquo;vtk&amp;rdquo;, &amp;ldquo;lxml&amp;rdquo; und &amp;ldquo;matplotlib&amp;rdquo; zur Ausführung von &lt;strong&gt;pyMANGA&lt;/strong&gt;.
+Diese müssen alle der Reihe nach installiert werden, der erste Befehl würde für das Modul &amp;ldquo;numpy&amp;rdquo; also folgendermaßen aussehen:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• pip3 install numpy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Eine Außnahme stellt lediglich das Modul &amp;ldquo;vtk&amp;rdquo; dar. Um später Berechnung mit pyMANGA durchführen zu können, bei denen auch die &lt;strong&gt;Grundwasserströmung&lt;/strong&gt; berücksichtigt wird, wird für dieses Modul &lt;strong&gt;eine bestimmte Version&lt;/strong&gt; benötigt.
+Soll nicht die aktuellste Version eines Moduls mit pip installiert werden, sieht der Befehl hierfür so aus:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• pip3 install vtk==8.1.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nachdem die fehlenden Modul installiert wurden, starten Sie pyMANGA erneut.
+Sollten jetzt noch weitere &lt;strong&gt;Python-Module&lt;/strong&gt; fehlen, wird &lt;strong&gt;pyMANGA&lt;/strong&gt; wieder eines davon als fehlende Voraussetzung ausgeben.
+Diesen Schritt wiederholen Sie so lange, bis alle Python-Module installiert sind.
+Wenn das der Fall ist, sollte Sie folgende Ausgabe erhalten:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Traceback (most recent call last):
+  File &amp;quot;main.py&amp;quot;, line 26, in main
+    prj = XMLtoProject(xml_project_file=project_file)
+UnboundLocalError: local variable &#39;project_file&#39; referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &amp;quot;main.py&amp;quot;, line 38, in &amp;lt;module&amp;gt;
+    main(sys.argv[1:])
+  File &amp;quot;main.py&amp;quot;, line 28, in main
+    raise UnboundLocalError(&#39;Wrong usage of pyMANGA. Type &amp;quot;python&#39; +
+UnboundLocalError: Wrong usage of pyMANGA. Type &amp;quot;python main.py -h&amp;quot; for additional help.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Auch wenn Sie zunächst diese Fehlermeldung erhalten bedeutet es, dass &lt;strong&gt;pyMANGA&lt;/strong&gt; richtig installiert und ausgeführt werden kann.
+Die Berechnung eines ersten Beispiel-Setups wird im Abschnitt &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pyMANGA/&#34;&gt;Erste Anwendungen von &lt;strong&gt;pyMANGA&lt;/strong&gt;&lt;/a&gt; dieses Tutorials erklärt.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Installation von pyMANGA in Windows&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Um &lt;strong&gt;pyMANGA&lt;/strong&gt; auszuführen zu können, müssen noch ein paar Module für den &lt;strong&gt;Python&lt;/strong&gt; &lt;strong&gt;Compiler&lt;/strong&gt; installiert werden.
+Dazu müssen Sie die &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt; öffnen.
+Diese finden Sie einfach über die Suche, indem Sie der &lt;strong&gt;„Eingabeaufforderung“&lt;/strong&gt; eingeben und per &lt;strong&gt;Mausklick&lt;/strong&gt; öffnen.
+Da es sich bei &lt;strong&gt;pyMANGA&lt;/strong&gt; um ein Zeilenprogramm handelt, spielt sich alles in der &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt; ab (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_5&#34;&gt;Abbildung 5&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_5&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/open_command_prompt.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 5:&lt;/b&gt; öffnen der Eingabeaufforderung.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Nun müssen die folgenden &lt;strong&gt;Module&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;numpy&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;vtk&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;lxml&lt;/strong&gt;&lt;/em&gt; und &lt;em&gt;&lt;strong&gt;matplotlib&lt;/strong&gt;&lt;/em&gt; installiert werden.
+Wir beginnen mit dem &lt;strong&gt;Modul&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;numpy&lt;/strong&gt;&lt;/em&gt;.
+Geben Sie den aufgezeigten Code in die &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt;, um das &lt;strong&gt;Modul&lt;/strong&gt; zu installieren (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_6&#34;&gt;Abbildung 6&lt;/a&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py -3.7 -m pip install numpy								    [1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_6&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/install_numpy_windows.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 6:&lt;/b&gt; Beispielhafte Installation des Moduls numpy.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Führen Sie dies analog für die drei anderen &lt;strong&gt;Module&lt;/strong&gt; aus mit dem folgenden Code&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py -3.7 -m pip install vtk								     [2]
+• py -3.7 -m pip install lxml							  	     [3]
+• py -3.7 -m pip install matplotlib							     [4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hinweis: Sollte die &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt; eine Wahrung ausgeben, dass &lt;em&gt;&lt;strong&gt;pip&lt;/strong&gt;&lt;/em&gt; nicht aktuell ist, können Sie mit &lt;strong&gt;upgrade&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;pip&lt;/strong&gt;&lt;/em&gt; dies aktualisieren.
+Dies ist aber nicht zwingend erforderlich.&lt;/p&gt;
+&lt;p&gt;Zur Erklärung was Sie eingegeben haben: &lt;em&gt;&lt;strong&gt;py&lt;/strong&gt;&lt;/em&gt; bedeuten, dass Sie &lt;strong&gt;Python&lt;/strong&gt; aufrufen.
+Dabei ist &lt;strong&gt;-3.7&lt;/strong&gt; die Version, die Sie nutzen.
+Mit &lt;em&gt;&lt;strong&gt;-m&lt;/strong&gt;&lt;/em&gt; wird ein Modul aufgerufen, in diesem Fall &lt;em&gt;&lt;strong&gt;pip&lt;/strong&gt;&lt;/em&gt;, welches dazu dient andere &lt;strong&gt;Module&lt;/strong&gt; zu installieren.
+Zum Schluss folgt der &lt;strong&gt;Modul&lt;/strong&gt; &lt;strong&gt;Name&lt;/strong&gt; vom zu installierendem &lt;strong&gt;Modul&lt;/strong&gt;.
+Nun sind die Vorbereitungen für die Nutzung des &lt;strong&gt;Compilers&lt;/strong&gt; abgeschlossen.
+Als nächsten Schritt müssen Sie, falls es noch nicht geschehen ist, das Programm &lt;strong&gt;pyMANGA&lt;/strong&gt; downloaden.
+Dazu gehen Sie auf die folgende &lt;a href=&#34;https://github.com/jbathmann/pyMANGA/&#34; title=&#34;https://github.com/jbathmann/pyMANGA/&#34;&gt;Homepage&lt;/a&gt; und downloaden das Programm als zip Datei und speichern es auf Ihren Rechner (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_7&#34;&gt;Abbildung 7&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_7&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/download_pymanga_windows.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 7:&lt;/b&gt; Download von pyMANGA.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Anschließend entpacken Sie die Datei (&lt;em&gt;&lt;strong&gt;pyMANGA-master.zip&lt;/strong&gt;&lt;/em&gt;) auf Ihren Desktop.
+Sie enthält sämtliche Programmbestandteile von &lt;strong&gt;pyMANGA&lt;/strong&gt; unter anderem &lt;em&gt;&lt;strong&gt;main.py&lt;/strong&gt;&lt;/em&gt;, welche die Ausführungsdatei darstellt, die zum Ausführen des Programmes aufgerufen werden muss.
+Dazu muss Sie nun dem &lt;strong&gt;Ordner&lt;/strong&gt; öffnen und mit &lt;strong&gt;Rechtsklick&lt;/strong&gt; in einem leeren Bereich des &lt;strong&gt;Ordners&lt;/strong&gt; die &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt; öffnen (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation/#Abbildung_8&#34;&gt;Abbildung 8&lt;/a&gt;) und den folgenden Code eingeben.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py main.py -h										     [5]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hierbei bedeutet wiederum &lt;em&gt;&lt;strong&gt;py&lt;/strong&gt;&lt;/em&gt; das Python aufgerufen wird, &lt;em&gt;&lt;strong&gt;main.py&lt;/strong&gt;&lt;/em&gt; stellt die Datei dar, die aufgerufen werden soll, und &lt;em&gt;&lt;strong&gt;-h&lt;/strong&gt;&lt;/em&gt; ruft die Hilfe auf.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_8&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/installation_of_pymanga/open_command_prompt_folder.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 8:&lt;/b&gt; öffnen der Eingabeaufforderung im pyMANGA Ordner.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Hinweis: Die &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt; wird im &lt;strong&gt;Ordner&lt;/strong&gt; aufgerufen, damit der &lt;em&gt;&lt;strong&gt;Ordnerpfad&lt;/strong&gt;&lt;/em&gt; nicht jedes Mal mit eingegeben werden muss.
+Unter Windows 10 ist dies nur möglich, wenn Sie sich &lt;em&gt;&lt;strong&gt;cmd in Kontextmenü hinzufügen.zip&lt;/strong&gt;&lt;/em&gt; von der folgenden &lt;a href=&#34;https://www.giga.de/downloads/windows-10/tipps/windows-10-wieder-die-eingabeaufforderung-im-kontextmenue-anzeigen/&#34; title=&#34;https://www.giga.de/downloads/windows-10/tipps/windows-10-wieder-die- eingabeaufforderung-im-kontextmenue-anzeigen/&#34;&gt;Homepage&lt;/a&gt; herunterladen und wie auf der Seite beschrieben ausführen.
+Alternativ ist es möglich in &lt;strong&gt;Eingabeaufforderung&lt;/strong&gt;, die Sie in der Windows Suche mit dem &lt;strong&gt;Suchbegriff&lt;/strong&gt; &lt;strong&gt;„Eingabeaufforderung“&lt;/strong&gt; finden, zu nutzen und den vollständigen Dateipfad anzugeben, der in diesem Beispiel wie folgt lautet &lt;em&gt;&lt;strong&gt;C:\Users...\Desktop\pyMANGA-master&lt;/strong&gt;&lt;/em&gt;.
+Um Ihren Dateipfad herauszufinden machen Sie einen &lt;strong&gt;Rechtsklick&lt;/strong&gt; auf den &lt;strong&gt;Ordner&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;pyMANGA-master&lt;/strong&gt;&lt;/em&gt; und gehen Sie auf &lt;strong&gt;Eigenschaften&lt;/strong&gt;.
+Hier finden sich die Angaben zum Ort des Ordners an den Sie noch mit eine \ den &lt;strong&gt;Namen&lt;/strong&gt; des &lt;strong&gt;Ordners&lt;/strong&gt; anhängen müssen.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Erste Anwendungen von pyMANGA</title>
+      <link>https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/</guid>
+      <description>
+        
+        
+        &lt;head&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+&lt;!--
+details summary {color: white; background: #00305E; margin-bottom: 1em;}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;p&gt;Bevor Sie mit den ersten Anwendungen beginnen, sollten Sie, falls noch nicht geschehen, die &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation&#34;&gt;Anleitungen zur Installation und Vorbereitung&lt;/a&gt; für ihr entsprechendes Betriebssystem lesen.
+Diese wird vor allem für Anfänger empfohlen, welche wenig Erfahrung mit &lt;strong&gt;Python&lt;/strong&gt; und der Eingabekonsole haben.
+Diese Anleitung ist grundsätzlich für alle drei Betriebsyteme (MacOS, Unbunt, Windows) geeignet.
+Der nachfolgende Absatz ist basierend auf der Ausführung in Windows beschrieben.
+Sollten Sie z.B. Ubuntu verwenden, beachten Sie bitte die Übertragung von allgemein bekannten Unterschieden (z.B. die Verwendung von Backslashes)&lt;/p&gt;
+&lt;h2 id=&#34;einfachere-beispiel-setups-ohne-opengeosys&#34;&gt;Einfachere Beispiel-Setups ohne OpenGeoSys&lt;/h2&gt;
+&lt;p&gt;Zunächst muss wieder mit der Konsolenoberfläche zu dem Dateispeicherort der &lt;strong&gt;pyMANGA&lt;/strong&gt; Hauptebene navigiert werden.
+Durch die Eingabe von&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py -3.7 main.py -h  			         [1a]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;für Windows und&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• python3 main.py -h  			         [1b]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;für Ubuntu wird &lt;strong&gt;pyMANGA&lt;/strong&gt; gestartet und alle verfügbaren Eingabeoptionen ausgegeben (-h steht für help).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_1&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/running_pymanga.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 1:&lt;/b&gt; Ausgeführte main.py Datei in der Windows-Eingabekonsole.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Hier ist zu sehen, dass die &lt;em&gt;&lt;strong&gt;main.py&lt;/strong&gt;&lt;/em&gt; Datei ausgeführt wurde und auf weitere Eingaben wartet.
+Damit ist der Start von &lt;strong&gt;MANGA&lt;/strong&gt; geglückt und Sie können ein paar erste Verwendungsbeispiele testen.
+Dazu können Sie folgenden Code eingeben (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_2&#34;&gt;Abbildung 2&lt;/a&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py -3.7 main.py -i test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml			  [2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;-i&lt;/strong&gt;&lt;/em&gt; beschreibt dabei den Index bzw. den Pfad der Datei, in der der Input definiert ist, der für dieses Beispiel verwendet werden soll.
+Beachten Sie, dass die Verwendung von Bachslashes im Dateipfad nur für die Windows-Variante gilt.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_2&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/error_output.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 2:&lt;/b&gt; Fehlermeldung beim Auführen von &lt;b&gt;py main.py -i .\test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml.&lt;/b&gt;&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Nach Ausführung des Codes wird eine Fehlermeldung ausgegeben, welche beschreibt, dass ein Ordner Namens &lt;em&gt;&lt;strong&gt;testoutputs&lt;/strong&gt;&lt;/em&gt; nicht existiert, welcher aber vom Programm benötigt wird, um die erzeugten Daten der Simulation abzuspeichern.
+Diese Information findet sich in der Datei &lt;em&gt;&lt;strong&gt;AllSimple_WithOutput.xml&lt;/strong&gt;&lt;/em&gt;, welche den Input für unser Beispiel definiert.
+Um diese einsehen zu können, müssen Sie die Datei mit Hilfe des Editors öffnen.
+Die XML-Datei finden Sie unter folgendem Dateifpad:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Dazu erstellen Sie bitte das Verzeichnis, welches als output_dir (Output-Directory) im Projekt-File angegeben ist. Die Standardeinstellung lautet:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;test\testoutputs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Der angegebene Dateipfad ist relativ zu dem Ordner, in dem sie &lt;strong&gt;pyMANGA&lt;/strong&gt; gestarten haben, angegeben (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_3&#34;&gt;Abbildung 3&lt;/a&gt;).
+Dazu folgen Sie dem in &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_2&#34;&gt;Abbildung 2&lt;/a&gt; angegeben Dateipfad im Ordner &lt;em&gt;&lt;strong&gt;pyMANGA-master&lt;/strong&gt;&lt;/em&gt; und machen einen &lt;strong&gt;Rechtsklick&lt;/strong&gt; auf die genannte Datei, gehen auf &lt;em&gt;&lt;strong&gt;Öffnen mit&lt;/strong&gt;&lt;/em&gt; und suchen den Editor raus (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_3&#34;&gt;Abbildung 3&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_3&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/control_file.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 3:&lt;/b&gt; Inhalt von &lt;/b&gt;AllSimple_WithOutput.xml&lt;/b&gt;, geöffnet mit dem Text Editor.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;In der Datei finden sich die &lt;strong&gt;rot-markierten&lt;/strong&gt; Zeilen, welche angeben was vom Programm ausgegeben werden soll, z.B. die &lt;strong&gt;Baumhöhe&lt;/strong&gt; &lt;strong&gt;(h_stem)&lt;/strong&gt; und wo hin, nämlich in den nicht existenten Ordner &lt;em&gt;&lt;strong&gt;testoutputs&lt;/strong&gt;&lt;/em&gt;, welcher als Ausgabeort für die Simulationsergebnisse definiert wurde.
+Demzufolge müssen Sie nun diesen Ordner erstellen.
+Dazu machen Sie einen &lt;strong&gt;Rechtsklick&lt;/strong&gt; in den Unterordner &lt;em&gt;&lt;strong&gt;C:\Users\chris\Desktop\pyMANGA-master\test&lt;/strong&gt;&lt;/em&gt;, klicken auf Neuen Ordner erstellen und nennen ihn testoutputs (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_4&#34;&gt;Abbildung 4&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_4&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/create_output_folder.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 4:&lt;/b&gt; Erstellung des neuen Ordners &lt;b&gt;testoutputst&lt;/b&gt;.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Im Anschluss führen Sie den Code 1 erneut in der Eingabeaufforderung aus.
+Nun sollte das Programm die erste Simulation starten (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_5&#34;&gt;Abbildung 5&lt;/a&gt;).
+Es gibt verschiedene input Parameter, welche in &lt;b&gt;MANGA&lt;/b&gt; Projektkonfigurationen eingestellt werden können.
+Die Datei, welche soeben gestartet wurde ist eine Konfigurationsdatei.
+Eine Beschreibung dieser Parameter findet sich auf der folgenden &lt;a href=&#34;https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html&#34; title=&#34;https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html&#34;&gt;Homepage&lt;/a&gt;.
+Die Ergebnisse der Simulation werden einmal visuell in einem separaten Fenster dargestellt (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_6&#34;&gt;Abbildung 6&lt;/a&gt;) und in Form von &lt;em&gt;&lt;strong&gt;csv&lt;/strong&gt;&lt;/em&gt; Dateien im neu angelegten Ordner &lt;em&gt;&lt;strong&gt;testoutputs&lt;/strong&gt;&lt;/em&gt;.
+Damit haben Sie erfolgreich das erste Beispiel ausgeführt.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_5&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/running_pymanga_output_exists.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 5:&lt;/b&gt; Widerholte Auführung von  &lt;b&gt;py main.py -i ProjectLib\ExampleSetups\AllSimple_WithOutput.xmlt&lt;/b&gt; nach Erstellung des neuen Ordners &lt;b&gt;testoutputs&lt;/b&gt;.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_6&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/results_matplotlib.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 6:&lt;/b&gt; Visuelle Ergebnisse der Simulation.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Analog dazu können Sie mit den folgenden Codes zwei weitere Beispiele ausprobieren, in dem andere Input-Varianten definiert sind.
+Dazu müssen Sie aber zunächst den Ordner &lt;em&gt;&lt;strong&gt;testoutputs&lt;/strong&gt;&lt;/em&gt; leeren bzw. einen anderen Ordner in den Input-Dateien mit Hilfe des Editors definieren, da das Programm die alten Output-Daten nicht überschreiben kann.
+Anschließend geben Sie wieder den Code in die Eingabeaufforderung ein.
+Des Weiteren wurden wiederum andere Parameter verändern.
+Verschaffen Sie sich mit Hilfe der &lt;a href=&#34;https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html&#34; title=&#34;https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html&#34;&gt;Homepage&lt;/a&gt; einen Überblick über die Einstellungsvarianten der Input-Parameter, die in den Beispielen verwendet werden und vergleichen Sie sie.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;• py -3.7 main.py -i test\SmallTests\Test_Setups_small\FIXEDSAL_BETTINA.xml 			 [3] 
+• py -3.7 main.py -i test\SmallTests\Test_Setups_small\FON_SAZOI_KIWI.xml			 [4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aufgrund von anderen Projekt-Konfigurationen (in &lt;em&gt;&lt;strong&gt;FIXEDSAL_BETTINA.xml und FON_SAZOI_KIWI.xml&lt;/strong&gt;&lt;/em&gt;) wird unteranderem im Beispiel zu Code 3 keine visuelle Darstellung ausgegeben (vergleiche &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_6&#34;&gt;Abbildung 6&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;komplexere-beispiel-setups-mit-opengeosys&#34;&gt;Komplexere Beispiel-Setups mit OpenGeoSys&lt;/h2&gt;
+&lt;p&gt;Die nächste Anwendung von &lt;strong&gt;pyMANGA&lt;/strong&gt; nutzt &lt;a href=&#34;https://www.opengeosys.org/&#34;&gt;&lt;strong&gt;OpenGeoSys&lt;/strong&gt;&lt;/a&gt; (OGS).
+Dabei handelt es sich um ein wissenschaftliches Open-Source-Projekt zur Entwicklung numerischer Methoden für die Simulation von thermo-hydro-mechanisch-chemischen (THMC) Prozessen in porösen und fragmentierten Medien.
+Um &lt;strong&gt;OGS&lt;/strong&gt; zu nutzen müssen Sie dieses zunächst herunterladen und installieren.
+Da die Installation zwischen den Betriebssystemen sehr verschieden ist, ist nachfolgende Erklägung individuell für Ihr Betriebssystem formuliert.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary &gt;Erste Anwendungen in Ubuntu&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Auf dieser &lt;a href=&#34;https://github.com/ufz/ogs/releases/tag/6.2.2&#34;&gt;Homepage&lt;/a&gt; finden Sie am Seitenende mehrere Varianten der OGS-Version 6.2.2.
+Wählen Sie die Variante &lt;strong&gt;&amp;ldquo;ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python&amp;ndash;de-utils&amp;rdquo;&lt;/strong&gt; aus und laden Sie den komprimierten Ordner herunter oder benutzen Sie direkt diesen &lt;a href=&#34;https://github.com/ufz/ogs/releases/download/6.2.2/ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python-de-utils.tar.gz&#34;&gt;Link&lt;/a&gt;.
+&lt;strong&gt;Stellen Sie bitte sicher, dass Sie exakt diese Version von OGS downloaden.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Entpacken Sie den Ordner und verschieben Sie die drei in diesem enthaltene Ordner (&lt;em&gt;bin&lt;/em&gt;, &lt;em&gt;lib&lt;/em&gt; und &lt;em&gt;share&lt;/em&gt;) ausgehend von der pyMANGA-Hauptebene in folgenden Ordner:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./TreeModelLib/BelowgroundCompetition/OGS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Die Dateien müssen direkt in diesem Ordner liegen.
+Um zu überprüfen ob OGS auf Ihrem Rechner ausführbar ist, öffnen Sie ein Terminal in der &lt;strong&gt;pyMANGA&lt;/strong&gt;-Hauptebene und geben Sie folgendes ein:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./TreeModelLib/BelowgroundCompetition/OGS/bin/ogs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lässt sich OGS korrekt ausführen, erhalten Sie folgende Ausgabe:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PARSE ERROR:
+             Required argument missing: project-file
+
+Brief USAGE: 
+   ./ogs  [--enable-fpe] [--unbuffered-std-out]
+          [--config-warnings-nonfatal] [-l &amp;lt;LOG_LEVEL&amp;gt;] [-o &amp;lt;PATH&amp;gt;] [-r
+          &amp;lt;PATH&amp;gt;] [--] [--version] [-h] &amp;lt;PROJECT_FILE&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sollte das nicht funktionieren, überprüfen Sie zunächst ob sie das Python-Modul &amp;ldquo;vtk&amp;rdquo; in der Version 8.1.2 installiert haben.
+Lesen Sie hierzu auch den &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/installation#Installation_Ubuntu&#34;&gt;Abschnitt zur Installation von pyMANGA in Ubuntu&lt;/a&gt;.
+Wenn Sie an dieser Stelle auf unüberwindbare Probleme stoßen &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/impressum&#34;&gt;kontaktieren&lt;/a&gt; Sie uns.&lt;/p&gt;
+&lt;p&gt;Nun können Sie das nächste Anwendungsbeispiel starten, indem Sie ein Terminal in der &lt;strong&gt;pyMANGA&lt;/strong&gt;-Hauptebene öffnen und nachfolgenden Befehl eingeben:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python3 main.py -i test/LargeTests/Test_Setups_large/OGS3D_SAZOI_BETTINA.xml 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Erste Anwendungen in Windows&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Um &lt;strong&gt;OGS&lt;/strong&gt; zu installieren gehen Sie auf die folgende &lt;a href=&#34;https://www.opengeosys.org/releases/&#34; title=&#34;https://www.opengeosys.org/releases/&#34;&gt;Homepage&lt;/a&gt;  und scrollen bis Sie die &lt;strong&gt;Version&lt;/strong&gt; &lt;strong&gt;6.3.0&lt;/strong&gt; finden und downloaden diese (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_7&#34;&gt;Abbildung 7&lt;/a&gt; und &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_8&#34;&gt;Abbildung 8&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_7&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/download_ogs_windows.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 7:&lt;/b&gt; Versionsauswahl von &lt;b&gt;OGS&lt;/b&gt;.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_8&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/Download_von_OGS 6.3.0.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 8:&lt;/b&gt; Download von OGS 6.3.0.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Wählen Sie, entsprechend ihres Betriebssystems, die zu downloadende Datei aus.
+Anschließend entpacken Sie die Zip Datei, kopieren den &lt;em&gt;&lt;strong&gt;Bin&lt;/strong&gt;&lt;/em&gt; Ordner und fügen diese in den &lt;em&gt;&lt;strong&gt;pyMANGA-master&lt;/strong&gt;&lt;/em&gt; Ordner in den folgenden Pfad ein (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_9&#34;&gt;Abbildung 9&lt;/a&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\pyMANGA-master\TreeModelLib\BelowgroundCompetition\OGS					 [5]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_9&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 9:&lt;/b&gt; Einfügen von OGS in den pyMANGA-master Ordner.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Damit ist &lt;strong&gt;OGS&lt;/strong&gt; installiert.
+Um zu testen ob es ordnungsgemäß funktioniert, öffnen Sie den &lt;em&gt;&lt;strong&gt;Bin&lt;/strong&gt;&lt;/em&gt; Ordner, drücken &lt;strong&gt;shift&lt;/strong&gt; und die &lt;strong&gt;rechte&lt;/strong&gt; Maustaste und wählen &lt;strong&gt;PowerShell-Fenster&lt;/strong&gt; &lt;strong&gt;hier&lt;/strong&gt; &lt;strong&gt;öffnen&lt;/strong&gt; (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_10&#34;&gt;Abbildung 10&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_10&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/ogs_powershell.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 10:&lt;/b&gt; Öffnen eines PowerShell-Terminals&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Kopieren Sie den Pfad, der im &lt;strong&gt;PowerShell-Fenster&lt;/strong&gt; angezeigt wird, und hängen Sie &lt;em&gt;&lt;strong&gt;\OGS&lt;/strong&gt;&lt;/em&gt; an und führen dies mit der &lt;strong&gt;Eingabetaste&lt;/strong&gt; aus.
+In der folgenden &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_11&#34;&gt;Abbildung 11&lt;/a&gt; sehen Sie die Ausgabe des &lt;strong&gt;PowerShell-Fensters&lt;/strong&gt;, wenn &lt;strong&gt;OGS&lt;/strong&gt; reibungslos funktioniert.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_11&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/output_ogs_runs.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt; Abbildung 11:&lt;/b&gt; Ausgabe bei Ordnungsgemäßer Funktion von OGS.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;p&gt;Nun können Sie das nächste Anwendungsbeispiel starten, indem Sie wie gehabt die Eingabeaufforderung im &lt;em&gt;&lt;strong&gt;pyMANGA-master&lt;/strong&gt;&lt;/em&gt; Ordner öffnen und pyMANGA starten.
+Anschließend geben Sie den nachfolgenden Befehl ein (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_12&#34;&gt;Abbildung 12&lt;/a&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;py -3.7 main.py -i test\LargeTests\Test_Setups_large\OGS3D_SAZOI_BETTINA.xml 				 [6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_12&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/run_ogs_sample_setup.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 12:&lt;/b&gt; zeigt die Ausführung des Anwendungsbeispiels mit OGS.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Hinweis: Die Rechenzeit kann mehrere Stunden betragen.
+Dies können Sie reduzierten, indem Sie in der Datei &lt;em&gt;&lt;strong&gt;OGS3D_SAZOI_BETTINA&lt;/strong&gt;&lt;/em&gt; unter folgenden Pfad &lt;em&gt;&lt;strong&gt;.\ProjectLib\ExampleSetups&lt;/strong&gt;&lt;/em&gt; öffnen und die folgende Zeile ändern:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;delta_t_ogs&amp;gt; 604800 &amp;lt;/delta_t_ogs&amp;gt;							 [7]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hier werden &lt;strong&gt;604800&lt;/strong&gt; Sekunden angegeben, diese Zahl kann variiert werden.
+Sie entspricht hier einer Woche, d.h. die OGS-Berechnungen werden im Baummodell nicht für den Ausgangszeitschritt, sondern nur für eine Woche durchgeführt.
+Aus den Ergebnissen wird die Porenwasserverteilung unter stationären Annahmen extrapoliert.
+Folglich muss dieser Parameter sehr vorsichtig verwendet werden, ist aber ein Mittel, um die Rechenzeit deutlich zu reduzieren (siehe &lt;a href=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/erste_schritte/erste_anwendungen_von_pymanga/#Abbildung_13&#34;&gt;Abbildung 13&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;a name=&#34;Abbildung_13&#34;&gt;&lt;/a&gt;
+&lt;img src=&#34;https://5eb306c1efda690006331c0a--pymanga.netlify.app/pictures/getting_started/first_applications_of_pymanga/set_timestep_length.jpg&#34;&gt;
+&lt;figcaption&gt;&lt;font size = &#34;1&#34;&gt;&lt;i&gt;&lt;b&gt;Abbildung 13:&lt;/b&gt; Anpassung zur Verkürzung der Rechenzeit.&lt;/i&gt;&lt;/font&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

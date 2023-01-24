@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.102.3" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>First applications of pyMANGA | pyMANGA</title><meta property="og:title" content="First applications of pyMANGA" />
+<meta property="og:description" content="Before you start with first applications, if you haven&rsquo;t already done so, you should read the installation and preparation instructions for your operating system. This is especially recommended for beginners who have little experience with Python and the input console. These instructions are generally suitable for all three operating systems (MacOS, Unbunt, Windows). The following chapter is described based on the execution in Windows. Note the corresponding changes when using Ubuntu (e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://5eb306c1efda690006331c0a--pymanga.netlify.app/docs/getting_started/first_applications_of_pymanga/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2021-05-04T12:13:24+02:00" /><meta property="og:site_name" content="pyMANGA" />
+
+<meta itemprop="name" content="First applications of pyMANGA">
+<meta itemprop="description" content="Before you start with first applications, if you haven&rsquo;t already done so, you should read the installation and preparation instructions for your operating system. This is especially recommended for beginners who have little experience with Python and the input console. These instructions are generally suitable for all three operating systems (MacOS, Unbunt, Windows). The following chapter is described based on the execution in Windows. Note the corresponding changes when using Ubuntu (e.">
+<meta itemprop="dateModified" content="2021-05-04T12:13:24+02:00" />
+<meta itemprop="wordCount" content="1277">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="First applications of pyMANGA"/>
+<meta name="twitter:description" content="Before you start with first applications, if you haven&rsquo;t already done so, you should read the installation and preparation instructions for your operating system. This is especially recommended for beginners who have little experience with Python and the input console. These instructions are generally suitable for all three operating systems (MacOS, Unbunt, Windows). The following chapter is described based on the execution in Windows. Note the corresponding changes when using Ubuntu (e."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">pyMANGA</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/download/" ><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/forum/" ><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/impressum/" ><span>Contact</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/de/">Deutsch</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    <div class="nav-item dropdown d-block d-lg-none">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/de/">Deutsch</a>
+	
+</div>
+    </div>
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/getting_started/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Getting started</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsgetting_started">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsgetting_startedinstallation" href="/docs/getting_started/installation/">Installation of pyMANGA</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsgetting_startedfirst_applications_of_pymanga" href="/docs/getting_started/first_applications_of_pymanga/">First applications of pyMANGA</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/steuerdatei/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Control File</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docssteuerdatei">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/sample_model_exmouth_gulf/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Sample Setup: Exmouth Gulf</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docssample_model_exmouth_gulf">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docssample_model_exmouth_gulfexmouth_gulf" href="/docs/sample_model_exmouth_gulf/exmouth_gulf/">Exmouth Gulf</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docssample_model_exmouth_gulfmodel_results" href="/docs/sample_model_exmouth_gulf/model_results/">The Model</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docssample_model_exmouth_gulfinstallation_exmouth" href="/docs/sample_model_exmouth_gulf/installation_exmouth/">Do it yourself</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/benchmarks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Module Benchmarks</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsbenchmarks">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#simple-sample-setups-without-opengeosys">Simple sample setups without OpenGeoSys</a></li>
+    <li><a href="#more-complex-sample-setups-with-opengeosys">More complex sample setups with OpenGeoSys</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/docs/getting_started/">Getting started</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/docs/getting_started/first_applications_of_pymanga/">First applications of pyMANGA</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>First applications of pyMANGA</h1>
+    
+	       
+	<head>
+<style type="text/css">
+<!--
+details summary {color: white; background: #00305E; margin-bottom: 1em;}
+-->
+</style>
+</head>
+<p>Before you start with first applications, if you haven&rsquo;t already done so, you should read the <a href="/docs/getting_started/installation">installation and preparation instructions</a> for your operating system.
+This is especially recommended for beginners who have little experience with <strong>Python</strong> and the input console.
+These instructions are generally suitable for all three operating systems (MacOS, Unbunt, Windows).
+The following chapter is described based on the execution in Windows.
+Note the corresponding changes when using Ubuntu (e.g. using of backslashes etc.)</p>
+<h2 id="simple-sample-setups-without-opengeosys">Simple sample setups without OpenGeoSys</h2>
+<p>First you have to use the console interface again to navigate to the file location of the <strong>pyMANGA</strong> main level.
+Entering then for <strong>Windows</strong></p>
+<pre><code>• py -3.7 main.py -h  			         [1a]
+</code></pre>
+<p>respectively for <strong>Ubuntu</strong></p>
+<pre><code>• python3 main.py -h  			         [1b]
+</code></pre>
+<p>starts <strong>pyMANGA</strong> and displays all available input options (-h stands for help).</p>
+<figure>
+<a name="Figure_1"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/running_pymanga.jpg">
+<figcaption><font size = "1"><i><b>Figure 1: </b>Executed main.py file in the windows input console.</i></font></figcaption>
+</figure><p>
+<p>Here you can see that the <em><strong>main.py</strong></em> file has been executed and is waiting for further input.
+So the start of <strong>pyMANGA</strong> was successful and you can test some first usage examples.
+You can enter the following code (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_2">Figure 2</a>) for <strong>Windows</strong>:</p>
+<pre><code>• py -3.8 main.py -i test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml	    		 [2a]
+</code></pre>
+<p>respectively for <strong>Ubuntu</strong>:</p>
+<pre><code>• python main.py -i test/SmallTests/Test_Setups_small/AllSimple_WithOutput.xml	    		 [2b]
+</code></pre>
+<p><em><strong>-i</strong></em> refers to the index or path of the file in which the input to be used for this example is defined.
+Note that the use of backslashes in the file path only applies to the Windows variant.</p>
+<figure>
+<a name="Figure_2"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/error_output.jpg">
+<figcaption><font size = "1"><i><b>Figure 2:</b> Error message when trying to <b>py main.py -i .\test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml.</b></i></font></figcaption>
+</figure><p>
+<p>After executing the code, an error message is displayed, which describes that a folder named <em><strong>testoutputs</strong></em> does not exist, but is needed by the program to save the simulation results.
+This information can be found in the file <em><strong>AllSimple_WithOutput.xml</strong></em>, which defines the input for our example.
+To view it, you have to open the file using the editor.
+You will find the file under the following path:</p>
+<p><em><strong>.\test\SmallTests\Test_Setups_small\AllSimple_WithOutput.xml</strong></em></p>
+<p>To do so, please create the directory which is listed in the xml-file.
+The default settings for the file path is:</p>
+<p><em><strong>test\testoutputs</strong></em></p>
+<p>The specified file path is relative to the folder where you started pyMANGA.
+Right-click on the file, click <em><strong>Open with</strong></em> and select the editor (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_3">Figure 3</a>).</p>
+<figure>
+<a name="Figure_3"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/control_file.jpg">
+<figcaption><font size = "1"><i><b>Figure 3:</b> Content of </b>AllSimple_WithOutput.xml</b>, opened with the Text Editor.</i></font></figcaption>
+</figure><p>
+<p>The file contains the <strong>red-marked</strong> lines, which define the programs output, e.g. the <strong>tree height (h_stem)</strong> and where to put it, namely in the non-existent folder <em><strong>testoutputs</strong></em>, which was defined as the output location for the simulation results.
+Consequently, you must now create this folder.
+To do this, right-click in the subfolder <em><strong>C:\Users\chris\Desktop\pyMANGA-master\test</strong></em>, click on Create new folder and name it testoutputs (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_4">Figure 4</a>).</p>
+<figure>
+<a name="Figure_4"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/create_output_folder.jpg">
+<figcaption><font size = "1"><i><b>Figure 4:</b> Creating the new folder <b>testoutputst</b>.</i></font></figcaption>
+</figure><p>
+<p>Then run code 1 again at the command prompt.
+Now the program should start the first simulation (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_5">Figure 5</a>).
+There are several input parameters which can be set in MANGA project configurations. The file which has just been started is a configuration file.
+A description of these parameters can be found on the following <a href="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html" title="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html">website</a>.
+The results of the simulation are displayed once visually in a separate window (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_6">Figure 6</a>) and in the form of <em><strong>csv</strong></em> files in the newly created folder <em><strong>testoutputs</strong></em>.
+You have successfully executed the first example.</p>
+<figure>
+<a name="Figure_5"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/running_pymanga_output_exists.jpg">
+<figcaption><font size = "1"><i><b>Figure 5:</b> Repeated performance of <b>py main.py -i ProjectLib\ExampleSetups\AllSimple_WithOutput.xmlt</b> After creating the new folder <b>testoutputst</b>.</i></font></figcaption>
+</figure><p>
+<figure>
+<a name="Figure_6"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/results_matplotlib.jpg">
+<figcaption><font size = "1"><i><b>Figure 6:</b> Visual results of the simulation.</i></font></figcaption>
+</figure><p>
+<p>Similarly, you can use the following codes to try out two more examples where other input variants are defined.
+However, you must first empty the <em><strong>testoutputs</strong></em> folder or define another folder in the input files using the editor, since the program cannot overwrite the old output data.
+Then enter the code in the command prompt again.
+In addition, other parameters were changed again.
+Use the <a href="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html" title="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html">website</a> to get an overview of the setting variants of the input parameters used in the examples and compare them.</p>
+<pre><code>• py -3.7 main.py -i test\SmallTests\Test_Setups_small\FIXEDSAL_BETTINA.xml   [3] 
+• py -3.7 main.py -i test\SmallTests\Test_Setups_small\FON_SAZOI_KIWI.xml     [4]
+</code></pre>
+<p>Due to other project configurations (in <em><strong>FIXEDSAL_BETTINA.xml and FON_SAZOI_KIWI.xml</strong></em>) there is no visual representation in the code 3 example (compare <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_6">Figure 6</a>).</p>
+<h2 id="more-complex-sample-setups-with-opengeosys">More complex sample setups with OpenGeoSys</h2>
+<p>The next application of <strong>pyMANGA</strong> uses <a href="https://www.opengeosys.org/"><strong>OpenGeoSys</strong></a> (OGS).
+This is a scientific open source project for the development of numerical methods for the simulation of thermo-hydro-mechanical-chemical (THMC) processes in porous and fragmented media.
+To use <strong>OGS</strong> you must first download and install it.
+Since the installation is very different between the operating systems, the following explanation is individually formulated for your operating system.</p>
+<details>
+<summary >First applications of pyMANGA with OGS in Ubuntu</summary>
+<p>
+<p>On this <a href="https://github.com/ufz/ogs/releases/tag/6.2.2">homepage</a> you will find several variants of OGS version 6.2.2 at the bottom of the page.
+Select the variant <strong>&ldquo;ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python&ndash;de-utils &ldquo;</strong> and download the compressed folder or use this <a href="https://github.com/ufz/ogs/releases/download/6.2.2/ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python-de-utils.tar.gz">link</a> directly. 
+<strong>Please make sure that you download exactly this version of OGS.</strong></p>
+<p>Unzip the folder and move the three folders it contains (<em>bin</em>, <em>lib</em> and <em>share</em>) seen from the pyMANGA main level to the following folder:</p>
+<pre><code>./TreeModelLib/BelowgroundCompetition/OGS
+</code></pre>
+<p>The files must be located directly in this folder.
+To check if OGS is executable on your computer, open a terminal in the <strong>pyMANGA</strong> main level and enter the following:</p>
+<pre><code>./TreeModelLib/BelowgroundCompetition/OGS/bin/ogs
+</code></pre>
+<p>If OGS runs correctly, you will get the following output:</p>
+<pre><code>PARSE ERROR:
+             Required argument missing: project-file
+
+Brief USAGE: 
+   ./ogs  [--enable-fpe] [--unbuffered-std-out]
+          [--config-warnings-nonfatal] [-l &lt;LOG_LEVEL&gt;] [-o &lt;PATH&gt;] [-r
+          &lt;PATH&gt;] [--] [--version] [-h] &lt;PROJECT_FILE&gt;
+</code></pre>
+<p>If this does not work, first check if you have installed the Python module &ldquo;vtk&rdquo; in version 8.1.2.
+Please also read the <a href="/en/docs/first_steps/installation#Installation_Ubuntu">section on installing pyMANGA in Ubuntu</a>.
+If you encounter insurmountable problems at this point <a href="/en/impressum">contact</a> us.</p>
+<p>Now you can start the next application example by opening a terminal in the <strong>pyMANGA</strong> main level and entering the following command:</p>
+<pre><code>python3 main.py -i test/LargeTests/Test_Setups_large/OGS3D_SAZOI_BETTINA.xml
+</code></pre>
+</p>
+</details>
+<details>
+<summary>First applications of pyMANGA with OGS in Windows</summary>
+<p>
+<p>To use <strong>OGS</strong> you have to download and install it first.
+To do so, go to the following <a href="https://www.opengeosys.org/releases/" title="https://www.opengeosys.org/releases/">website</a> and scroll down until you find <strong>version 6.3.0</strong> and download it (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_7">Figure 7</a> and <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_8">Figure 8</a>).</p>
+<figure>
+<a name="Figure_7"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/version_ogs_windows.jpg">
+<figcaption><font size = "1"><i><b>Figure 7:</b> Version selection of OGS.</i></font></figcaption>
+</figure><p>
+<figure>
+<a name="Figure_8"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/download_ogs_windows.jpg">
+<figcaption><font size = "1"><i><b>Figure 8:</b> Download OGS 6.3.0.</i></font></figcaption>
+</figure><p>
+<p>Select the file to be downloaded according to your operating system.
+Then unzip the zip file, copy the <em><strong>bin</strong></em> folder and paste it into the <em><strong>pyMANGA-master</strong></em> folder in the following path (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_9">Figure 9</a>).</p>
+<pre><code>• pyMANGA-master\TreeModelLib\BelowgroundCompetition\OGS				 [5]
+</code></pre>
+<figure>
+<a name="Figure_9"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg">
+<figcaption><font size = "1"><i><b>Figure 9:</b> Insert OGS into the pyMANGA-master folder.</i></font></figcaption>
+</figure><p>
+<p><strong>OGS</strong> is now installed. To test if it works properly, open the <em><strong><em>Bin</em></strong></em> folder, press <strong>shift</strong> and the <strong>right mouse button</strong> and select <strong>Open PowerShell window here</strong> (see Figure <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_10">Figure 10</a>).</p>
+<figure>
+<a name="Figure_10"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/ogs_powershell.jpg">
+<figcaption><font size = "1"><i><b>Figure 10:</b> Open PowerShell</i></font></figcaption>
+</figure><p>
+<p>Copy the path that appears in the <strong>PowerShell window</strong> and append <em><strong>\OGS</strong></em> and press Enter.
+The following <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_11">Figure 11</a> shows the PowerShell window output when OGS is running smoothly.</p>
+<figure>
+<a name="Figure_11"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/output_ogs_runs.jpg">
+<figcaption><font size = "1"><i><b> Figure 11:</b> Output if OGS functions properly.</i></font></figcaption>
+</figure><p>
+<p>Now you can start the next application example by opening the command prompt in the <em><strong>pyMANGA-master</strong></em> folder and starting pyMANGA as usual.
+Then enter the following command (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_12">Figure 12</a>).</p>
+<pre><code>• py -3.7 main.py -i \test\LargeTests\Test_Setups_large\OGS3D_SAZOI_BETTINA.xml 				 [6]
+</code></pre>
+<figure>
+<a name="Figure_12"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/run_ogs_sample_setup.jpg">
+<figcaption><font size = "1"><i><b>Figure 12:</b> shows the execution of the application example with OGS.</i></font></figcaption>
+</figure><p>
+<p>Note: The computing time can take several hours.
+You can reduce this by opening</p>
+<p><em><strong>.\test\LargeTests\Test_Setups_large\OGS3D_SAZOI_BETTINA.xml</strong></em></p>
+<p>and adding the following line</p>
+<pre><code>• &lt;delta_t_ogs&gt; 604800 &lt;/delta_t_ogs&gt;							 [7]
+</code></pre>
+<p>Here <strong>604800</strong> is given in seconds and can be varied.
+Here, it corresponds here to one week, i.e. the ogs-calculations are not performed for the home timestep in the tree model but only for one week.
+From the results the porewater distribution is extrapolated under steady state assumptions.
+Consequently, this parameter has to be used very carefully but is a means to significantly reduce computing time (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_13">Figure 13</a>).</p>
+<figure>
+<a name="Figure_13"></a>
+<img src="/pictures/getting_started/first_applications_of_pymanga/set_timestep_length.jpg">
+<figcaption><font size = "1"><i><b>Figure 13:</b> Adaptation to the computing time reduction.</i></font></figcaption>
+</figure><p>
+</p>
+</details>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 4, 2021: <a  href="/commit/e851e7f29d72648daead7b1a1461c26a133bcb66">Changes in web/doc/: (e851e7f2)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <p>
+&nbsp;
+</p>
+<p>
+<div style="display: table; width: 100%; background: white;">
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://tu-dresden.de/"><img src="/pictures/Logo_TU.png"  height="50px" width="auto"></a></figure>
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://www.ufz.de/"><img src="/pictures/Logo_UFZ.png"  height="50px" width="auto"></a></figure>
+</div>
+</p>
+<p>
+&nbsp;
+</p>
+
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 layout theme: The Docsy Authors, content: The pyMANGA Authors All Rights Reserved</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.83c196fc7e04d2720ca8bb5fc2637bd0d13e555e9b0df8c12fdd7d3e86e48164.js" integrity="sha256-g8GW/H4E0nIMqLtfwmN70NE&#43;VV6bDfjBL919PobkgWQ=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
