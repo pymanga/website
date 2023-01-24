@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.102.3" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<link rel="alternate" type="application/rss&#43;xml" href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/steuerdatei/index.xml">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Die Steuerdatei | pyMANGA</title><meta property="og:title" content="Die Steuerdatei" />
+<meta property="og:description" content="Mangrove groundwater salinity feedback model" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/steuerdatei/" /><meta property="og:site_name" content="pyMANGA" />
+
+<meta itemprop="name" content="Die Steuerdatei">
+<meta itemprop="description" content="Mangrove groundwater salinity feedback model"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Die Steuerdatei"/>
+<meta name="twitter:description" content="Mangrove groundwater salinity feedback model"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/de/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">pyMANGA</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/download/" ><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/de/docs/" ><span class="active">Dokumentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/forum/" ><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/impressum/" ><span>Kontakt</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Deutsch
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/docs/steuerdatei/">English</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Diese Seite durchsuchen…" aria-label="Diese Seite durchsuchen…" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Diese Seite durchsuchen…" aria-label="Diese Seite durchsuchen…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    <div class="nav-item dropdown d-block d-lg-none">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Deutsch
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/docs/steuerdatei/">English</a>
+	
+</div>
+    </div>
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dokumentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="dedocs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/erste_schritte/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Erste Schritte</a>
+  </li>
+  <ul>
+    <li class="collapse " id="dedocserste_schritte">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocserste_schritteinstallation" href="/de/docs/erste_schritte/installation/">Installation von pyMANGA</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocserste_schritteerste_anwendungen_von_pymanga" href="/de/docs/erste_schritte/erste_anwendungen_von_pymanga/">Erste Anwendungen von pyMANGA</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/steuerdatei/" class="align-left pl-0 pr-2 collapsed active td-sidebar-link td-sidebar-link__section">Die Steuerdatei</a>
+  </li>
+  <ul>
+    <li class="collapse " id="dedocssteuerdatei">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/beispielmodell_exmouth_gulf/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Beispielmodell: Exmouth-Golf</a>
+  </li>
+  <ul>
+    <li class="collapse " id="dedocsbeispielmodell_exmouth_gulf">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocsbeispielmodell_exmouth_gulfder_exmouth_golf" href="/de/docs/beispielmodell_exmouth_gulf/der_exmouth_golf/">Der Exmouth-Golf</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocsbeispielmodell_exmouth_gulfergebnisse" href="/de/docs/beispielmodell_exmouth_gulf/ergebnisse/">Das Modell</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocsbeispielmodell_exmouth_gulfinstallation_exmouth" href="/de/docs/beispielmodell_exmouth_gulf/installation_exmouth/">Setup selbst berechnen</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tree_dynamics">tree_dynamics</a>
+      <ul>
+        <li><a href="#aboveground_competition">aboveground_competition</a></li>
+        <li><a href="#belowground_competition">belowground_competition</a></li>
+        <li><a href="#tree_growth_and_death">tree_growth_and_death</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial_population">initial_population</a></li>
+    <li><a href="#tree_time_loop">tree_time_loop</a></li>
+    <li><a href="#visualization">visualization</a></li>
+    <li><a href="#tree_output">tree_output</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/">Dokumentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/steuerdatei/">Die Steuerdatei</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Die Steuerdatei</h1>
+        
+	
+	<p>Die Steuerdatei eines jeden pyMANGA-Setups wird im xml-Format geschrieben, hier werden alle Einstellungen zur Modellierung vorgenommen.
+Im Folgenden wird exemplarisch die Steuerdatei des Modellsetups &ldquo;Full Model&rdquo; beschrieben.
+Bei diesem Modell handelt es sich um eine gekoppelte Betrachtung des Grundwasserhaushalts und Pflanzenwachstums.
+Es wird also sowohl der Einfluss der Gezeitendynamik als auch der Zusammenhang zwischen Pflanzenwassernutzung und Salzgehalt im Porenwasser berücksichtigt.
+Für mehr Information zu diesem Modell lesen Sie <a href="/de/docs/beispielmodell_exmouth_gulf/" target="_blank">diesen Abschnitt</a> in der Dokumentation, der das Setup genauer beschreibt.
+Weitere Informationen zur Steuerdatei finden Sie auch in dieser <a href="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__MangaProject.html" target="_blank">Dokumentation</a>.</p>
+<h2 id="tree_dynamics">tree_dynamics</h2>
+<p>Unter dem Punkt &ldquo;tree_dynamics&rdquo; werden Einstellungen zur dynamischen Entwicklung des Baumbestands vorgenommen.</p>
+<h3 id="aboveground_competition">aboveground_competition</h3>
+<p>Dieser Unterpunkt charakterisiert die Modellierung des Baumwachstums über dem Boden.
+Da pyMANGA das Wachstum über das Vorhandensein von Ressourcen modelliert, stehen diese auch in diesem Unterpunkt im Vordergrund.
+Die für pyMANGA relevanten überirdische Ressource stellt das Sonnenlich dar.
+Der erste Punkt, &ldquo;type&rdquo;, definiert die Grundeinstellung als den Typ &ldquo;SimpleAsymmetricZOI&rdquo;.
+Diese Einstellungen befinden sich im Quellcode des Programms unter ./TreeModelLib/AbovegroundCompetition/SimpleAsymmetricZOI&quot;.
+Mit dieser Grundeinstellung wird das Modellgebiet in Zonen unterteilt, in denen der Baum mit der jeweils größten Kronenhöhe alles zur Verfügung stehende Sonnenlicht bekommt.
+Die Klasse benötigt die unter dem nächsten Punkt &ldquo;domain&rdquo; definierten Eingangsgrößen.
+&ldquo;y_1&rdquo;, &ldquo;y_2, &ldquo;x_1&rdquo; und &ldquo;x_2&rdquo; legen die Grenzen des Modellgebiets fest.
+Die Koordinatenwerte mit den Indizes &ldquo;1&rdquo; definieren dabei die numerisch niedrigeren Werte, die Indizes &ldquo;2&rdquo; die numerisch höheren.
+&ldquo;x_resolution&rdquo; und &ldquo;y_resolution&rdquo; legen mit der Anzahl der Gitterknotenpunkte in die jeweilige Raumrichtung die räumliche Diskretisierung des Modellgebiets fest.</p>
+<p>Derzeit gibt es noch eine weitere Klasse für &ldquo;type&rdquo;, &ldquo;SimpleTest&rdquo;.
+Diese soll für Beispiel-Setups und zur Überprüfung der korrekten Berechnung von Setups angewendet werden und eignet sich nicht zur Modellierung von realen Mangroven-Populationen.</p>
+<h3 id="belowground_competition">belowground_competition</h3>
+<p>Neben den überirdischen Ressourcen berücksichtigt pyMANGA auch die unterirdischen für die Bäume zur Verfügung stehenden Ressourcen.
+Im Punkt &ldquo;belowground_competion&rdquo; werden die Einstellungen hierfür im Steuerfile vorgenommen, wofür fünf verschiedene Klassen zur Verfügung stehen.
+Im Quellcode finden sich diese unter &ldquo;./TreeModelLib/BelowgroundCompetition&rdquo;.
+In diesem Setup wird die Klasse &ldquo;OGSLargeScale3D&rdquo; verwendet (Unterpunkt &ldquo;type&rdquo;), welche für die Modellierung der Änderung des Salzgehalts im Porenwasser mithilfe eines komplexeren Grundwassermodells ausgelegt ist.</p>
+<p>Im Unterpunkt &ldquo;ogs_project_folder&rdquo; wird der Dateipfad der OGS-Eingangsdateien festgelegt, im nächsten Schritt der Name der OGS-Steuerdatei (&ldquo;ogs_project_file&rdquo;).</p>
+<p>Im Punkt &ldquo;abiotic drivers&rdquo; können der Salzgehalt des Meerwassers (bzw. i. A. des Salzwassers), die Periode der monatlichen und täglichen Tide und die Amplitude der monatlichen und täglichen Tide.
+In diesem Steuerfile ist nur der Wert für den Salzgehalt definiert, die Werte zum Tidenhub werden über python_script eingelesen (siehe am Ende dieses Abschnitts).</p>
+<p>Mit &ldquo;delta_t_ogs&rdquo; wird die numerische Grundwassermodellierung mit OGS zeitlich diskretisiert.
+Diese Variable kann auch dazu genutzt werden, um numerische Instabilitäten zu beheben oder die Rechenzeit zu minimieren.</p>
+<p>Im Punkt &ldquo;source_mesh&rdquo; wird der Name der Gitter-Datei für das OGS-Modell benannt.
+Diese Datei definiert die räumliche Diskretisierung des Grundwassermodells mittels einer vtu-Datei.</p>
+<p>Im letzten Unterpunkt, &ldquo;python_script&rdquo;, kann eine Python-Datei angegeben werden, in der Randbedingungen und Quellterme für das OGS-Modell definiert werden.
+Diese Angabe ist optional; die Notwendigkeit hängt von der Komplexität des Grundwassermodells ab.
+In diesem Modell sorgt die Datei für eine Schleife der aus der Datei EXM_Jan-Jul_2019.txt eingelesenen Informationen zum Tidehub und eine dynamische Anpassung des mittleren Wasserstands.</p>
+<h3 id="tree_growth_and_death">tree_growth_and_death</h3>
+<p>Im dritten und letzten Hauptpunkt des Abschnitts &ldquo;tree_dynamics&rdquo; kann das dynamische Konzept des Baumwachstums und -sterbens ausgewählt werden.
+Hierfür stehen drei zur Verfügung, &ldquo;SimpleKiwi&rdquo;, &ldquo;SimpleTest&rdquo; und &ldquo;SimpleBettina&rdquo;.
+Mit dem in diesem Setup verwendeten Konzepts &ldquo;SimpleBettina&rdquo; wird das &ldquo;Kiwi single tree model&rdquo; zur Modellierung der dynamischen Entwicklung des Baumbestands verwendet.
+Weitere Informationen finden sich hierzu in dieser <a href="https://doi.org/10.1016/j.ecolmodel.2018.10.005"> Veröffentlichung</a> Im Quellcode finden sich die drei Konzepte unter</p>
+<pre><code>./TreeModelLib/GrowthAndDeathDynamics/&quot;.
+</code></pre>
+<p>An dieser Stelle ist der Abschnitt &ldquo;tree_dynamics&rdquo; zu Ende.</p>
+<h2 id="initial_population">initial_population</h2>
+<p>In diesem Abschnitt wird die Baumpopulation zu Beginn des Modellierungszeitraums (IC) und das neue hinzukommen von Bäumen in jedem Zeitschritt festgelegt.</p>
+<p>Eine Gruppe von Bäumen, die dem Modell hinzugefügt werden soll, wird im Element &ldquo;group&rdquo; definiert.
+So können zum Beispiel die Bäume, die zu Beginn der Modellierung im Modellgebiet vorhanden sein sollen als ein Gruppe und jene, die in jedem Zeitschritt als neue Bäume hinzukommen in einer anderen Gruppe definiert werden.
+In diesem Setup gibt es genau diese zwei Gruppen.</p>
+<p>Der Punkt &ldquo;species&rdquo; gibt die Art der Bäume an.
+Momentan ist hier nur die graue Mangrove (Avicennia marina) mit der Klasse &ldquo;avicennia&rdquo; auswählbar.</p>
+<p>Unter &ldquo;distribution&rdquo; wird die Verteilung der Bäume, also die räumliche Anordnung im Modellgebiet, bestimmt.
+Unter &ldquo;type&rdquo; kann diese entweder mit &ldquo;GroupFromFile&rdquo; aus einer Datei ausgelesen werden oder - wie in diesem Setup - mit &ldquo;random&rdquo; zufällig angeordnet werden.
+Unter &ldquo;domain&rdquo; wird das Modellgebiet festgelegt.
+Die Koordinatenwerte mit den Indizes &ldquo;1&rdquo; definieren dabei die numerisch niedrigeren Werte, die Indizes &ldquo;2&rdquo; die numerisch höheren.
+Mit &ldquo;n_individuals&rdquo; kann die Anzahl an Bäumen, die zu Beginn der Modellierung im Modell vorhanden sein soll und mit &ldquo;n_recruitment_per_step&rdquo; die Anzahl an Bäumen, die zu jedem Zeitschritt als junge Bäume dem Modell hinzugefügt werden soll.
+In der Gruppe &ldquo;Recruiting&rdquo; ist &ldquo;n_individuals&rdquo; auf Null gesetzt, &ldquo;n_recruitment_per_step&rdquo; auf 30.
+Hieran lässt sich also erkenn, dass diese erste Gruppe dazu dient, neue Bäume über die gesamte Modelllaufzeit zu integrieren.
+Da &ldquo;n_individuals&rdquo; zwingend angegeben werden muss, &ldquo;n_recruitment_per_step&rdquo; aber optional ist, wird in der zweiten Gruppe &ldquo;Inital&rdquo; nur noch &ldquo;n_individuals&rdquo; mit 30 angegeben.
+Zu Beginn der Modellierung sollen also 30 Bäume zufällig im Modellgebiet verteilt vorhanden sein.</p>
+<p>Im Quellcode finden sich die für die Modellierung des Hinzukommens von neuen Bäumen ins Modell benötigten Dateien unter ./PopulationLib.</p>
+<h2 id="tree_time_loop">tree_time_loop</h2>
+<p>Hier wird das Modell zeitlich diskretisiert.</p>
+<p>Zur Verfügung steht für &ldquo;type&rdquo; momentan nur &ldquo;simple&rdquo;.
+Hierbei sind alle Zeitschritte über die gesamte Modellierung gleich groß.
+Angegeben werden müssen die Startzeit (&ldquo;t_start&rdquo;), Endzeit (&ldquo;t_end&rdquo;) und die Zeitschrittlänge (&ldquo;delta_t&rdquo;).</p>
+<h2 id="visualization">visualization</h2>
+<p>In diesem Setup ist eine Visualisierung der Modellierung während eines Modelllaufs ausgeschaltet.
+Für den Punkt &ldquo;type&rdquo; wird hierzu &ldquo;NONE&rdquo; gewählt.
+Mit &ldquo;SimplePypolot&rdquo; würde die Position und der Kronenradius von Bäumen in Echtzeit mit Hilfe der matplotlib visualisiert werden.</p>
+<h2 id="tree_output">tree_output</h2>
+<p>Im letzten Abschnitt wird die Speicherung der Modellergebnisse festgelegt.</p>
+<p>Hierfür gibt es drei verschiedene Möglichkeiten die unter &ldquo;case&rdquo; angegeben werden: &ldquo;NONE&rdquo; speichert keine Ergebnisse, mit &ldquo;OneTimestepOneFile&rdquo; wird pro Zeitschritt eine Datei mit der Baumpopulation gespeichert und mit &ldquo;OneTreeOneFile&rdquo; wird für jeden im Modell vorhandenen Baum eine eigene Datei abgespeichert.
+Der Dateipfad wird unter &ldquo;output_dir&rdquo; angegeben.
+Dieser muss vorhanden und leer sein, andernfalls startet die Modellierung nicht.
+Mit den Punkten &ldquo;geometry_output&rdquo; können geometrische Maße der Output-Datei hinzugefügt werden.
+Die in diesem Setup gewählten Variablen sind &ldquo;r_stem&rdquo; (Stammradius), &ldquo;h_stem&rdquo; (Stammhöhe), &ldquo;r_crown&rdquo; (Kronenhöhe) und &ldquo;r_root&rdquo; (Wurzelradius).
+Mit dem letzten Punkt &ldquo;growth_output&rdquo; können Informationen aus dem Baumwachstumskonzept ausgegeben werden.
+Alle Informationen die der Output-Datei hinzugefügt werden können lassen sich unter ./TreeModelLib/GrowthAndDeathDynamics/SimpleBettina/SimpleBettina.py Zeile 35 ff. einsehen.</p>
+
+        <div class="section-index">
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+</div>
+
+	
+	
+</div>
+
+          </main>
+        </div>
+      </div>
+      <p>
+&nbsp;
+</p>
+<p>
+<div style="display: table; width: 100%; background: white;">
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://tu-dresden.de/"><img src="/pictures/Logo_TU.png"  height="50px" width="auto"></a></figure>
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://www.ufz.de/"><img src="/pictures/Logo_UFZ.png"  height="50px" width="auto"></a></figure>
+</div>
+</p>
+<p>
+&nbsp;
+</p>
+
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 layout theme: The Docsy Authors, content: The pyMANGA Authors Alle Rechte vorbehalten</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Datenschutzrichtlinie</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.83c196fc7e04d2720ca8bb5fc2637bd0d13e555e9b0df8c12fdd7d3e86e48164.js" integrity="sha256-g8GW/H4E0nIMqLtfwmN70NE&#43;VV6bDfjBL919PobkgWQ=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

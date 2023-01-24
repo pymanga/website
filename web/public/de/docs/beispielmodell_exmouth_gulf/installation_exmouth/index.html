@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.102.3" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Setup selbst berechnen | pyMANGA</title><meta property="og:title" content="Setup selbst berechnen" />
+<meta property="og:description" content="Das Modellsetup des „Full Models“ befindet sich in der aktuellen Version von pyMANGA in folgendem Ordner:
+./Benchmarks/Exmouth_Gulf/full_modelUm einen Modelllauf mit dem Setup auf dem eigenen Rechner zu starten müssen im wesentlichen Dateipfade, die auf Input-Dateien zeigen, im XML-Steuerfile angepasst werden. Alle Dateipfade im Steuerfile werden absolut angegeben, jeder Pfad beginnt also unter Ubuntu mit „/home/&hellip;“ und unter Windows mit dem Buchstaben des Laufwerks. Wird der Dateispeicherort des Setups nicht verändert, so befindet sich die Steuerdatei an folgendem Ort:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/beispielmodell_exmouth_gulf/installation_exmouth/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2021-05-10T10:48:18+02:00" /><meta property="og:site_name" content="pyMANGA" />
+
+<meta itemprop="name" content="Setup selbst berechnen">
+<meta itemprop="description" content="Das Modellsetup des „Full Models“ befindet sich in der aktuellen Version von pyMANGA in folgendem Ordner:
+./Benchmarks/Exmouth_Gulf/full_modelUm einen Modelllauf mit dem Setup auf dem eigenen Rechner zu starten müssen im wesentlichen Dateipfade, die auf Input-Dateien zeigen, im XML-Steuerfile angepasst werden. Alle Dateipfade im Steuerfile werden absolut angegeben, jeder Pfad beginnt also unter Ubuntu mit „/home/&hellip;“ und unter Windows mit dem Buchstaben des Laufwerks. Wird der Dateispeicherort des Setups nicht verändert, so befindet sich die Steuerdatei an folgendem Ort:">
+<meta itemprop="dateModified" content="2021-05-10T10:48:18+02:00" />
+<meta itemprop="wordCount" content="287">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup selbst berechnen"/>
+<meta name="twitter:description" content="Das Modellsetup des „Full Models“ befindet sich in der aktuellen Version von pyMANGA in folgendem Ordner:
+./Benchmarks/Exmouth_Gulf/full_modelUm einen Modelllauf mit dem Setup auf dem eigenen Rechner zu starten müssen im wesentlichen Dateipfade, die auf Input-Dateien zeigen, im XML-Steuerfile angepasst werden. Alle Dateipfade im Steuerfile werden absolut angegeben, jeder Pfad beginnt also unter Ubuntu mit „/home/&hellip;“ und unter Windows mit dem Buchstaben des Laufwerks. Wird der Dateispeicherort des Setups nicht verändert, so befindet sich die Steuerdatei an folgendem Ort:"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/de/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">pyMANGA</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/download/" ><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/de/docs/" ><span class="active">Dokumentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/forum/" ><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/de/impressum/" ><span>Kontakt</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Deutsch
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/">English</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Diese Seite durchsuchen…" aria-label="Diese Seite durchsuchen…" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 Diese Seite durchsuchen…" aria-label="Diese Seite durchsuchen…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    <div class="nav-item dropdown d-block d-lg-none">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	Deutsch
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/">English</a>
+	
+</div>
+    </div>
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dokumentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="dedocs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/erste_schritte/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Erste Schritte</a>
+  </li>
+  <ul>
+    <li class="collapse " id="dedocserste_schritte">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocserste_schritteinstallation" href="/de/docs/erste_schritte/installation/">Installation von pyMANGA</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocserste_schritteerste_anwendungen_von_pymanga" href="/de/docs/erste_schritte/erste_anwendungen_von_pymanga/">Erste Anwendungen von pyMANGA</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/steuerdatei/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Die Steuerdatei</a>
+  </li>
+  <ul>
+    <li class="collapse " id="dedocssteuerdatei">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/de/docs/beispielmodell_exmouth_gulf/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Beispielmodell: Exmouth-Golf</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="dedocsbeispielmodell_exmouth_gulf">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocsbeispielmodell_exmouth_gulfder_exmouth_golf" href="/de/docs/beispielmodell_exmouth_gulf/der_exmouth_golf/">Der Exmouth-Golf</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dedocsbeispielmodell_exmouth_gulfergebnisse" href="/de/docs/beispielmodell_exmouth_gulf/ergebnisse/">Das Modell</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-dedocsbeispielmodell_exmouth_gulfinstallation_exmouth" href="/de/docs/beispielmodell_exmouth_gulf/installation_exmouth/">Setup selbst berechnen</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/">Dokumentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/beispielmodell_exmouth_gulf/">Beispielmodell: Exmouth-Golf</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://5eb306c1efda690006331c0a--pymanga.netlify.app/de/docs/beispielmodell_exmouth_gulf/installation_exmouth/">Setup selbst berechnen</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Setup selbst berechnen</h1>
+    
+	       
+	<p>Das Modellsetup des „<b>Full Models</b>“ befindet sich in der aktuellen Version von pyMANGA in folgendem Ordner:</p>
+<pre><code>./Benchmarks/Exmouth_Gulf/full_model
+</code></pre>
+<p>Um einen Modelllauf mit dem Setup auf dem eigenen Rechner zu starten müssen im wesentlichen Dateipfade, die auf Input-Dateien zeigen, im XML-Steuerfile angepasst werden.
+Alle Dateipfade im Steuerfile werden absolut angegeben, jeder Pfad beginnt also unter Ubuntu mit „/home/&hellip;“ und unter Windows mit dem Buchstaben des Laufwerks.
+Wird der Dateispeicherort des Setups nicht verändert, so befindet sich die Steuerdatei an folgendem Ort:</p>
+<pre><code>./Benchmarks/Exmouth_Gulf/full_model/setup_pymanga.xml
+</code></pre>
+<p>Im Steuerfile („setup_pymanga.xml“) muss der Dateipfad für den Ordner mit den OGS-Input-Dateien (Zeile 18), die Datei mit der Parametrisierung des Baumwachstumsmodells (Zeile 36) und der Ordner für die Ausgabe der Modellergebnisse (Zeile 62) angegeben werden.
+Als Ausgabeort können Sie auch einen individuellen Dateispeicherort wählen; wichtig ist nur, dass dieser Ordner auch existiert und leer ist - pyMANGA erstellt nicht vorhandene Ausgabeorte nicht automatisch und löscht vorhandene Dateien nicht.</p>
+<p>Ein Beispiel für die Dateipfade in oben erwähnter Reihenfolge könnte also wie folgt aussehen:</p>
+<pre><code>/home/Dokumente/pyMANGA-master/Benchmarks/Exmouth_Gulf/full_model/TreeOutput
+
+/home/Dokumente/pyMANGA-master/Benchmarks/Exmouth_Gulf/full_model/Avicennia.py
+
+/home/Dokumente/pyMANGA-master/Benchmarks/Exmouth_Gulf/full_model
+</code></pre>
+<p>Die Grundwassermodellierung mit OGS wird mit Hilfe eines zusätzlichen Python-Scripts ausgeführt.
+Dieses Script stellt für OGS unter anderem Werte zum Tidenhub aus der Datei „EXM_Jan-Jul_2019.txt“ bereit, setzt diese Daten in eine Schleife (da der Modellierungszeitraum deutlich länger als der Zeitraum der Tide-Daten ist) und sorgt für eine Anpassung des mittleren Wasserspiegels.
+In der Datei („python_script.py“) findet sich ein Verweis auf den Dateispeicherort dieser Datei, in Zeile 140 f. muss der Dateispeicherort der „EXM_Jan-Jul_2019.txt“-Datei an die lokale Ordnerstruktur angepasste werden.</p>
+<p>Das Setup lässt sich jetzt durch das Öffnen eines Terminals in der Hauptebene von pyMANGA durch Eingabe des Befehls</p>
+<pre><code>python3 main.py -i /Benchmarks/Exmouth_Gulf/full_model/setup_pymanga.xml
+</code></pre>
+<p>starten. Die allgemeine Form würde wie folgt aussehen:</p>
+<pre><code>python3 absolute/path/to/main.py -i absolute/path/to/full_model/setup_pymanga.xml
+</code></pre>
+<p>Bei Fragen oder Problemen kontaktieren Sie uns gerne.</p>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Zuletzt geändert 10.05.2021: <a  href="/commit/6ba6c098266de08269c3a3d57fc36522b5df85a4">Removing colons from folder names in folder web/doc (6ba6c098)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <p>
+&nbsp;
+</p>
+<p>
+<div style="display: table; width: 100%; background: white;">
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://tu-dresden.de/"><img src="/pictures/Logo_TU.png"  height="50px" width="auto"></a></figure>
+<figure style="display: table-cell; padding: 0 4px; text-align: center;"><a href="https://www.ufz.de/"><img src="/pictures/Logo_UFZ.png"  height="50px" width="auto"></a></figure>
+</div>
+</p>
+<p>
+&nbsp;
+</p>
+
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 layout theme: The Docsy Authors, content: The pyMANGA Authors Alle Rechte vorbehalten</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank">Datenschutzrichtlinie</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.83c196fc7e04d2720ca8bb5fc2637bd0d13e555e9b0df8c12fdd7d3e86e48164.js" integrity="sha256-g8GW/H4E0nIMqLtfwmN70NE&#43;VV6bDfjBL919PobkgWQ=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
