@@ -1,6 +1,6 @@
 ---
-title: "Impressum"
-linkTitle: "Impressum"
+title: "Imprint"
+linkTitle: "Imprint"
 weight: 3
 ---
 
