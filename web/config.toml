@@ -79,6 +79,8 @@ staticDir = "static"
 copyright = "layout theme: The Docsy Authors, content: The pyMANGA Authors"
 privacy_policy = "https://policies.google.com/privacy"
 
+custom_css = ["css/module_tags.css"]
+
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
 
