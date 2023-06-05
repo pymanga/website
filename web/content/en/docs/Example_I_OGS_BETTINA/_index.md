@@ -1,7 +1,7 @@
 ---
-title: "Example model: The coupling of OGS and BETTINA"
-linkTitle: "Example model: The coupling of OGS and BETTINA"
-weight: 3
+title: "Example I: The coupling of OGS and BETTINA"
+linkTitle: "Example I: The coupling of OGS and BETTINA"
+weight: 4
 description:
 ---
 
