@@ -1,7 +1,7 @@
 ---
-title: "Sample Setup: Exmouth Gulf in Australia"
-linkTitle: "Sample Setup: Exmouth Gulf"
-weight: 3
+title: "Example II: Exmouth Gulf in Australia"
+linkTitle: "Example II: Exmouth Gulf"
+weight: 5
 description:
 ---
 
