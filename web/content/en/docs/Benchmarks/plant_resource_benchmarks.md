@@ -8,8 +8,8 @@ description:
 ## Design of plant-and resource benchmarks
 
 Benchmarks concerning the plant and resource modules are clustered in sets belonging to a certain plant growth concept (i.e., plant module).
-Each set has a reference plant, which is an individual plant, growing with the particular growth concept but without competition or resource limitation (<a href="/docs/Benchmarks/#Figure_1">Figure 1a</a>).
-The output metrics of each benchmark are the plant geometry parameters available for the particular plant module, e.g., stem height, crown, root and stem radius (<a href="/docs/Benchmarks/#Figure_1">Figure 1b</a>).
+Each set has a reference plant, which is an individual plant, growing with the particular growth concept but without competition or resource limitation (<a href="/docs/benchmarks/plant_resource_benchmarks/#Figure_1">Figure 1a</a>).
+The output metrics of each benchmark are the plant geometry parameters available for the particular plant module, e.g., stem height, crown, root and stem radius (<a href="/docs/benchmarks/plant_resource_benchmarks/#Figure_1">Figure 1b</a>).
 Additional outputs relevant for the tested module might be specified.
 
 <figure class="alert">
@@ -20,16 +20,16 @@ Additional outputs relevant for the tested module might be specified.
 </figure>
 
 Within a set, benchmarks are classified based on the compartment of the module tested, i.e. below-ground interaction, above-ground interaction and plant mortality. 
-Modules of the other compartments are defined as for the reference plant  (<a href="/docs/Benchmarks/#Figure_2">Figure 2a</a>). 
+Modules of the other compartments are defined as for the reference plant  (<a href="/docs/benchmarks/plant_resource_benchmarks/#Figure_2">Figure 2a</a>). 
 This means, for example, to test the below-ground module ‘FixedSalinity’, above-ground interaction is disabled (SimpleTest) and mortality is mechanistic.
 
-The general structure of each benchmark is a 2-plant setup, without recruitment (<a href="/docs/Benchmarks/#Figure_2">Figure 2b</a>).
+The general structure of each benchmark is a 2-plant setup, without recruitment (<a href="/docs/benchmarks/plant_resource_benchmarks/#Figure_2">Figure 2b</a>).
 The plants are placed centered in a 22x22 m model domain with a fixed distance of 2 m. 
 The initialization of those plants is based on the geometry of the reference plant. 
 The initial population is designed in a way that the respective geometry triggers a potentially critical situation of the concept. 
 In some below-ground modules, this is for example the case, when the root systems of the plants overlap.
-Thus, we defined an initial population for each compartment ([Table_1](#Table_1)). 
-Each initial population is stored in ‘Benchmarks/ModuleTests/<plant_module>/\<compartment>/’.
+Thus, we defined an initial population for each compartment. 
+Each initial population is stored in ’Benchmarks/ModuleTests/<plant_module>/\<compartment>/’.
 
 If land- and seaward boundary conditions need to be defined in a setup, salinity is set to 25 ppt at the landward boundary and to 35 ppt at the seaward boundary. 
 Random seed of all setups is 643879.
@@ -67,8 +67,8 @@ SimpleBettina works with all resource and mortality modules and has therefore th
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NULL</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
 
@@ -79,13 +79,13 @@ SimpleBettina works with all resource and mortality modules and has therefore th
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <span class="tag tag-inactive">NULL</span>   
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">FON</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">OGS</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">OGS-External</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">SymZOI</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">SymZOI-FS</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/SimpleTest" target=”_blank”><span class="tag tag-active">NULL</span></a>   
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FON" target=”_blank”><span class="tag tag-inactive">FON</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/OGSLargeScale3D" target=”_blank”><span class="tag tag-active">OGS</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/OGSLargeScale3D-External" target=”_blank”><span class="tag tag-inactive">OGS-External</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/SymmetricZOI" target=”_blank”><span class="tag tag-active">SymZOI</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/SZoiFixedSalinity" target=”_blank”><span class="tag tag-active">SymZOI-FS</span></a>
         </div>
     </div>
 </div>      
@@ -96,10 +96,10 @@ SimpleBettina works with all resource and mortality modules and has therefore th
             <span class="text-primary">Mortality</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NoGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Memory</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">RandomGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Random</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Mortality/NoGrowth" target=”_blank”><span class="tag tag-active">NoGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Mortality/Memory" target=”_blank”><span class="tag tag-active">Memory</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Mortality/RandomGrowth" target=”_blank”><span class="tag tag-active">RandomGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Mortality/Random" target=”_blank”><span class="tag tag-active">Random</span></a>
         <br><br>
         <p style="margin-bottom: 0;"><small><i>Parameter 'k_die' set extremely low in order to force trees to die</i></small></p>
     </div>
@@ -122,8 +122,8 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NULL</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">AsymZOI</span></a>
     </div>
 </div>
 
@@ -134,11 +134,10 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <span class="tag tag-active">NULL</span>   
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">SimpleNetwork</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NetworkFixedSalinity</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NetworkOGSLargeScale</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NetworkOGSLargeScale-External</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/Network" target=”_blank”><span class="tag tag-active">NULL</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkFixedSalinity" target=”_blank”><span class="tag tag-active">NetworkFixedSalinity</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D" target=”_blank”><span class="tag tag-active">NetworkOGS</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D-External" target=”_blank”><span class="tag tag-inactive">NetworkOGS-External</span></a>
         </div>
     </div>
 </div>      
@@ -149,10 +148,10 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
             <span class="text-primary">Mortality</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NoGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Memory</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">RandomGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Random</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/NoGrowth" target=”_blank”><span class="tag tag-inactive">NoGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Memory" target=”_blank”><span class="tag tag-inactive">Memory</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/RandomGrowth" target=”_blank”><span class="tag tag-inactive">RandomGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Random" target=”_blank”><span class="tag tag-inactive">Random</span></a>
         <br><br>
         <p style="margin-bottom: 0;"><small><i>Parameter 'k_die' set extremely low in order to force trees to die</i></small></p>
     </div>
@@ -175,8 +174,8 @@ This means however that root and crown radii are equal.
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NULL</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
 
@@ -187,13 +186,13 @@ This means however that root and crown radii are equal.
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <span class="tag tag-inactive">NULL</span>   
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi" target=”_blank”><span class="tag tag-active">NULL</span></a>   
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">FON</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">OGS</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">OGS</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">OGS-External</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">SymZOI</span></a>
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">SymZOI-FS</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">SymZOI</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">SymZOI-FS</span></a>
         </div>
     </div>
 </div>     
@@ -204,10 +203,10 @@ This means however that root and crown radii are equal.
             <span class="text-primary">Mortality</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">NoGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Memory</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">RandomGrowth</span></a>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-active">Random</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Mortality/NoGrowth" target=”_blank”><span class="tag tag-active">NoGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Mortality/Memory" target=”_blank”><span class="tag tag-active">Memory</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Mortality/RandomGrowth" target=”_blank”><span class="tag tag-active">RandomGrowth</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Mortality/Random" target=”_blank”><span class="tag tag-active">Random</span></a>
         <br><br>
         <p style="margin-bottom: 0;"><small><i>Parameter 'k_die' set extremely low in order to force trees to die</i></small></p>
     </div>
