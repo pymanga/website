@@ -67,7 +67,7 @@ SimpleBettina works with all resource and mortality modules and has therefore th
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground" target=”_blank”><span class="tag tag-inactive">Default</span></a>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
@@ -79,7 +79,7 @@ SimpleBettina works with all resource and mortality modules and has therefore th
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/SimpleTest" target=”_blank”><span class="tag tag-active">NULL</span></a>   
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/SimpleTest" target=”_blank”><span class="tag tag-active">Default</span></a>   
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FON" target=”_blank”><span class="tag tag-inactive">FON</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/OGSLargeScale3D" target=”_blank”><span class="tag tag-active">OGS</span></a>
@@ -122,7 +122,7 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">Default</span></a>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">AsymZOI</span></a>
     </div>
 </div>
@@ -134,7 +134,7 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/Network" target=”_blank”><span class="tag tag-active">NULL</span></a>
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/Network" target=”_blank”><span class="tag tag-active">Default</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkFixedSalinity" target=”_blank”><span class="tag tag-active">NetworkFixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D" target=”_blank”><span class="tag tag-active">NetworkOGS</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D-External" target=”_blank”><span class="tag tag-inactive">NetworkOGS-External</span></a>
@@ -174,7 +174,7 @@ This means however that root and crown radii are equal.
             <span class="text-primary">Aboveground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">NULL</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">Default</span></a>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
@@ -186,7 +186,7 @@ This means however that root and crown radii are equal.
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi" target=”_blank”><span class="tag tag-active">NULL</span></a>   
+            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi" target=”_blank”><span class="tag tag-active">Default</span></a>   
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">FON</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">OGS</span></a>
