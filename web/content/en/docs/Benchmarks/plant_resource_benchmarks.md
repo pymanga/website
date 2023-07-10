@@ -29,7 +29,7 @@ The initialization of those plants is based on the geometry of the reference pla
 The initial population is designed in a way that the respective geometry triggers a potentially critical situation of the concept. 
 In some below-ground modules, this is for example the case, when the root systems of the plants overlap.
 Thus, we defined an initial population for each compartment. 
-Each initial population is stored in ’Benchmarks/ModuleTests/<plant_module>/\<compartment>/’.
+Each initial population is stored in ’Benchmarks/ModuleBenchmarks/PlantModules/<plant_module>/\<compartment>/’.
 
 If land- and seaward boundary conditions need to be defined in a setup, salinity is set to 25 ppt at the landward boundary and to 35 ppt at the seaward boundary. 
 Random seed of all setups is 643879.
@@ -51,23 +51,34 @@ The following files must be provided for each benchmark
 - Results csv file (`<output_times> [2e6, 5e8] </output_times>`) of type `OneTimestepOneFile`
 - All files required to run the setup, e.g. OGS project file (if applicable)
  
-The files are stored in 'Benchmarks/ModuleBenchmarks/<plant_module>/\<compartment>/' with the name of the module tested.
+The files are stored in 'Benchmarks/ModuleBenchmarks/PlantModules/<plant_module>/\<compartment>/' with the name of the module tested.
 
 ## Overview of existing modules and benchmarks
 
-Here is an overview of which modules and benchmarks are available. Modules marked in blue have already been benchmarked. Click on the button to go to the appropriate folder.
+Below is an overview of which modules and benchmarks are available. 
+Modules marked in blue have already been benchmarked. 
+Click on the button to go to the relevant folder.
 
-### Modules tested with SimpleBettina
+### Modules tested with Bettina
 
-SimpleBettina works with all resource and mortality modules and has therefore the most comprehensive collection of benchmarks.
+Bettina works with all resource and mortality modules and has therefore the most comprehensive collection of benchmarks.
 
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Aboveground</span>
+            <span class="text-primary">Default</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground" target=”_blank”><span class="tag tag-inactive">Default</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/SimpleTest" target=”_blank”><span class="tag tag-active">Default</span></a>   
+    </div>
+</div>
+
+<div class="container">
+    <div class="border rounded p-3 mt-1">
+        <h3>
+            <span class="text-primary">Above-ground</span>
+        </h3>
+        <hr>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
@@ -75,11 +86,10 @@ SimpleBettina works with all resource and mortality modules and has therefore th
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Belowground</span>
+            <span class="text-primary">Below-ground</span>
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/SimpleTest" target=”_blank”><span class="tag tag-active">Default</span></a>   
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/FON" target=”_blank”><span class="tag tag-inactive">FON</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/Bettina/Belowground/OGSLargeScale3D" target=”_blank”><span class="tag tag-active">OGS</span></a>
@@ -106,23 +116,31 @@ SimpleBettina works with all resource and mortality modules and has therefore th
 </div>
 
 
-### Modules tested with NetworkBettina
+### Modules tested with BettinaNetwork
 
 Network modules enable the formation of groups, representing root grafted trees.
 Grafted trees can exchange water, based on the water potential gradient between them.
 
 The module describing the group formation as well as the water exchange is 'SimpleNetwork'.
 All other below-ground network modules are children of this module and one or two other existing below-ground modules allowing for example the definition of a salinity gradient ('NetworkFixedSalinity').
-Network below-ground modules must be combined with the growth module 'NetworkBettina' which is based on 'SimpleBettina' but describes resource allocation to form the root graft.
-
+Network below-ground modules must be combined with the growth module 'BettinaNetwork' which is based on 'Bettina' but describes resource allocation to form the root graft.
 
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Aboveground</span>
+            <span class="text-primary">Default</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">Default</span></a>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/Network" target=”_blank”><span class="tag tag-active">Default</span></a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="border rounded p-3 mt-1">
+        <h3>
+            <span class="text-primary">Above-ground</span>
+        </h3>
+        <hr>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">AsymZOI</span></a>
     </div>
 </div>
@@ -130,11 +148,10 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Belowground</span>
+            <span class="text-primary">Below-ground</span>
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/Network" target=”_blank”><span class="tag tag-active">Default</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkFixedSalinity" target=”_blank”><span class="tag tag-active">NetworkFixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D" target=”_blank”><span class="tag tag-active">NetworkOGS</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/BettinaNetwork/Belowground/NetworkOGSLargeScale3D-External" target=”_blank”><span class="tag tag-inactive">NetworkOGS-External</span></a>
@@ -158,23 +175,30 @@ Network below-ground modules must be combined with the growth module 'NetworkBet
 </div>
 
 
-### Modules tested with SimpleKiwi
+### Modules tested with Kiwi
 
-In SimpleKiwi, crown and root radius are not explicitly defined as in Bettina as the tree is only described by dbh and height.
+In Kiwi, crown and root radius are not explicitly defined as in Bettina as the tree is only described by dbh and height.
 Hence, below- and above-ground modules, which depend on crown and root radius would not work.
 We therefore use the equation suggested by Berger and Hildenbrandt (2000) to scale dbh to the so called zone of influence to estimate root and crown radii.
 This means however that root and crown radii are equal.
 
 
-
+<div class="container">
+    <div class="border rounded p-3 mt-1">
+        <h3>
+            <span class="text-primary">Default</span>
+        </h3>
+        <hr>
+        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/SimpleTest" target=”_blank”><span class="tag tag-active">Default</span></a>   
+    </div>
+</div>
 
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Aboveground</span>
+            <span class="text-primary">Above-ground</span>
         </h3>
         <hr>
-        <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">Default</span></a>
         <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Aboveground/SimpleAsymmetricZOI" target=”_blank”><span class="tag tag-active">AsymZOI</span></a>
     </div>
 </div>
@@ -182,11 +206,10 @@ This means however that root and crown radii are equal.
 <div class="container">
     <div class="border rounded p-3 mt-1">
         <h3>
-            <span class="text-primary">Belowground</span>
+            <span class="text-primary">Below-ground</span>
         </h3>
         <hr>
         <div class="flex-row" style="gap:10px">
-            <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi" target=”_blank”><span class="tag tag-active">Default</span></a>   
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/PlantModules/SimpleKiwi/Belowground/FixedSalinity" target=”_blank”><span class="tag tag-active">FixedSalinity</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">FON</span></a>
             <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/BelowgroundCompetition/FixedSalinity" target=”_blank”><span class="tag tag-inactive">OGS</span></a>
