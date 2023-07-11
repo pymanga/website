@@ -1,12 +1,10 @@
 
 ---
-title: Download
-linkTitle: Download
+title: Source Code
+linkTitle: Source Code
 weight: 3
 
 ---
 
-
-Please download the source code via GitHub.
-<a href="https://github.com/jbathmann/pyMANGA" target="_blank">GitHub repository</a>
-
+All source code is available via our <a href="https://github.com/pymanga/pyMANGA/" target="_blank">GitHub repository</a>.  
+If you are interested in contributing, we encourage you to clone the repository and create a pull request.  
