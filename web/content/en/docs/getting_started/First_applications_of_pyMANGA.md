@@ -1,6 +1,6 @@
 ---
-title: "First applications of pyMANGA"
-linkTitle: "First applications of pyMANGA"
+title: "First applications"
+linkTitle: "First applications"
 weight: 2
 description:
 ---
@@ -20,8 +20,11 @@ These instructions are generally suitable for all three operating systems (Ubunt
 
 ## Setup without OpenGeoSys
 
-> Here, we explain how to run the simple pyMANGA setup 'SimpleBettina' from our [benchmark gallery](https://github.com/jbathmann/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/GrowthAndDeath/SimpleBettina).
-> More information on our benchmarks can be found [here](/docs/benchmarks/).
+> Here, we explain how to run a simple pyMANGA setup
+> In this setup, 10 black mangrove trees grow at seawater salinity. 
+> Tree growth follows the BETTINA approach.
+> Model output is written to the folder 'ModelOutput' in the same directory.  
+> More examples can be found [here](/docs/benchmarks/) and in our [benchmark gallery](https://github.com/jbathmann/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/).
 
 First you have to use the console interface again to navigate to the file location of the **pyMANGA** main level.
 Entering then for **Windows**
@@ -40,17 +43,19 @@ starts **pyMANGA** and displays all available input options (-h stands for help)
 
 Here you can see that the ***MANGA.py*** file has been executed and is waiting for further input.
 So the start of **pyMANGA** was successful, and you can test the first example.
-You can enter the following code (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_2">Figure 2</a>) for **Windows**:
 
-	py -3.7 MANGA.py -i Benchmarks\ModuleBenchmarks\GrowthAndDeath\SimpleBettina\SimpleBettina.xml
+To do so, you need to add the path to the pyMANGA project file as input.  
+For **Windows** type:
+
+	py -3.7 MANGA.py -i Benchmarks/ExampleSetups/FirstApplication/example_setup.xml
 
 respectively for **Ubuntu**:
 
-    python MANGA.py -i Benchmarks/ModuleBenchmarks/GrowthAndDeath/SimpleBettina/SimpleBettina.xml
+    python MANGA.py -i Benchmarks/ExampleSetups/FirstApplication/example_setup.xml
 
 ***-i*** refers to the index or path of the file in which the input to be used for this example is defined.
 
-This code calls **pyMANGA** with the control file 'SimpleBettina.xml'.
+This code calls **pyMANGA** with the control file 'example_setup.xml'.
 For detailed information on the structure of control files see chapter [Control File](/docs/steuerdatei/)
 
 
@@ -74,12 +79,12 @@ Select the variant **"ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python--de-utils "*
 
 Unzip the folder and move the three folders it contains (_bin_, _lib_ and _share_) seen from the pyMANGA main level to the following folder:
 
-	./TreeModelLib/BelowgroundCompetition/OGS
+	./ResourceLib/BelowGround/OGS
 
 The files must be located directly in this folder.
 To check if OGS is executable on your computer, open a terminal in the **pyMANGA** main level and enter the following:
 
-	./TreeModelLib/BelowgroundCompetition/OGS/bin/ogs
+	./ResourceLib/BelowGround/OGS/bin/ogs
 
 If OGS runs correctly, you will get the following output:
 
@@ -120,7 +125,7 @@ To do so, go to the following [website](https://www.opengeosys.org/releases/ "ht
 Select the file to be downloaded according to your operating system.
 Then unzip the zip file, copy the ***bin*** folder and paste it into the ***pyMANGA-master*** folder in the following path (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_9">Figure 9</a>).
 
-	pyMANGA-master\TreeModelLib\BelowgroundCompetition\OGS
+	pyMANGA-master\ResourceLib\BelowGround\OGS
 
 <figure class="alert">
      <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg">
