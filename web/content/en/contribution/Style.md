@@ -41,27 +41,62 @@ But remember: while comments are very important, the best code is self-documenti
 Giving sensible names to types and variables is much better than using obscure names that you must then explain through comments.
 
 When writing your comments, write for your audience: the next contributor who will need to understand your code. Be generous — the next one may be you!
+
 ### Comment Style
-For comments inside the implementation use the # syntax, as long as you are consistent. For header file comments use Doxygen ### comments. Doxygen allows to automatically generating browsable source code documentation. Additional information like a brief description or function parameter description can be added inside Doxygen comments with backslashed or @-prefixed keywords like /// \brief or /// @see.
-#### File Comments
-Start each file with the copyright and license notice, followed by a description of the contents of the file.
+
+We use [pdoc](https://pdoc.dev/) for to build our [documentation page](https://pymanga.github.io/pyMANGA/pyMANGA.html).
+Therefore, comments in google docstring format are added below each method definition.
+With pdoc, we can create a browsable source code documentation.
+
+For comments inside the implementation use the # syntax. 
+
+Have a look at the [Network](https://github.com/pymanga/pyMANGA/blob/master/ResourceLib/BelowGround/Network/Network/Network.py) resource module to see an example.
+
+### Comment Tense
+
+We (try to) use present-tense and imperative style, e.g. “create” instead of “creates”.
+
+#### Module Comments
+Modules in the ResourceLib or PlantModelLib should contain a short description of the concept written as a Markdown document in the same folder as the module.
+This document should also contain the definition of inputs that need to be defined in the pyMANGA project file.
+Include an import of this markdown file the respective ``__init__.py``.
+
 #### Class Comments
-Every class definition should have an accompanying comment that describes what it is for and how it should be used.
+Every class (module) should have an accompanying comment that describes what it is for and how it should be used.
+
 #### Function Comments
 Declaration comments describe use of the function; comments at the definition of a function describe operation.
+
+Note: Inherited functions can also inherit the docstring shown on the documentation page if it is not overwritten.
+An example where this is used is the ``prepareNextTimeStep`` function that is required in each resource module.
+
 #### Variable Comments
 In general the actual name of the variable should be descriptive enough to give a good idea of what the variable is used for. In certain cases, more comments are required.
+
 #### Implementation Comments
 In your implementation you should have comments on tricky, non-obvious, interesting, or important parts of your code.
+
 #### Punctuation, Spelling and Grammar
 Pay attention to punctuation, spelling, and grammar; it is easier to read well-written comments than badly written ones.
+
 #### TODO Comments
 Use TODO comments for code that is temporary, a short-term solution, or good-enough but not perfect.
-Formatting
 
-Coding style and formatting are pretty arbitrary, but a project is much easier to follow if everyone uses the same style.
-Individuals may not agree with every aspect of the formatting rules, and some of the rules may take some getting used to, but it is important that all project contributors follow the style rules so that they can all read and understand everyone's code easily.
-We use googles **yapf** Software to automatically follow the 'clang-format'. (<a href="https://github.com/google/yapf" target="_blank">yapf</a>).
+## Formatting
+
+Coding style and formatting are fairly arbitrary, but a project is much easier to follow if everyone uses the same style.
+Individuals may not agree with every aspect of the formatting rules, and some rules may take some getting used to, but it is important that all project contributors follow the style rules so that everyone's code is easy to read and understand.
+We use Google's **yapf** software to automatically follow the clang format (<a href="https://github.com/google/yapf" target="_blank">yapf</a>).
+
+## Commit messages
+
+At the start of commit message reference to the library you are updating in square-brackets, e.g. “[PML] ...” for PlantModelLib.
+
+Exceptions are:
+- “yapf” - reformat code with the yapf auto-reformatter (in PyCharm: crt+alt+L)
+- "[doc]..." - documentation related commits
+- "[ci] ..." - ci related commits
+- "[bmk] ..." - benchmark related commits
 
 ## Exceptions to the Rules
 
