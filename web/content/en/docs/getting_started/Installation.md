@@ -132,7 +132,7 @@ The calculation of a first example setup is explained in the section  <a href="/
 
 To run **pyMANGA**, you must first obtain an **interpreter** for the **Python** programming language.
 An example would be **python<sup>T</sup><sup>M</sup>**.
-To do this, open your browser and go to ***Python.org***.
+To do this, open your browser and go to **[Python.org](https://www.python.org/downloads/windows/)**.
 In the drop-down menu under ***Download*** you will find the current release version for your operating system of **Python** (this manual describes the procedure for Windows, see <a href="/docs/getting_started/installation/#Figure_1">Figure 1</a>).
 
 <figure class="alert">
@@ -145,8 +145,10 @@ In the drop-down menu under ***Download*** you will find the current release ver
 
 Execute the downloaded file (***python-3.7.7-amd64.exe***) like a normal Windows exe and install it on your computer (see <a href="/docs/getting_started/installation/#Figure_3">Figure 3</a>). 
 
+Make sure you check the box <span style="color: #aa2a2a">"Add Python 3.7 to PATH"</span>.
+
 <figure class="alert">
-     <img id="Figure_3" src="/pictures/getting_started/installation_of_pymanga/installation_python_windows.jpg">
+     <img id="Figure_3" src="/pictures/getting_started/InstallPythonWindows.png">
 </figure>
 
 This completes the **Python** installation. 
@@ -157,7 +159,7 @@ This completes the **Python** installation.
 <details>
 <summary >Installation of Python Modules in Windows <a name="Installation_Ubuntu"></a></summary>
 
-To install python modules, we use the **"Command Prompt"**.
+To install python modules, you can use the **"Command Prompt"** or the **"Terminal"** of your IDE.
 You can easily find it by typing **"Command Prompt"** in the windows search window and opening it with a **mouse click**.
 Since pyMANGA is a command line program, everything happens at the command prompt (see <a href="/docs/getting_started/installation/#Figure_5">Figure 5</a>).
 
