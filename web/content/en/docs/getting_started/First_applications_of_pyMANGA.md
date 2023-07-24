@@ -56,7 +56,7 @@ respectively for **Ubuntu**:
 ***-i*** refers to the index or path of the file in which the input to be used for this example is defined.
 
 This code calls **pyMANGA** with the control file 'example_setup.xml'.
-For detailed information on the structure of control files see chapter [Control File](/docs/steuerdatei/)
+For detailed information on the structure of control files see chapter [Control File](/docs/control_file/)
 
 
 ## Setup with OpenGeoSys

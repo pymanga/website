@@ -7,31 +7,32 @@ description:
 
 The control file of each pyMANGA setup is written in _xml_ format.
 This file includes all settings for to run pyMANGA.
-In the following, each section of the control file is explained using of the model setup "Full Model" as an example.
+In the following, each section of the control file is explained using the model setup "Full Model" as an example.
 This model is a coupled consideration of the groundwater balance and plant growth.
 Thus, both the influence of tidal dynamics and the relationship between plant water use and salinity in pore water are considered.
-This model is presented <a href="/docs/example_ogs_bettina/" target="_blank">here</a> in more detail.
-The control file can be found <a href="https://github.com/jbathmann/pyMANGA/blob/master/Benchmarks/ExampleSetups/ExmouthGulf/setup_pymanga.xml" target="_blank">here</a>.
+This model is presented <a href="/docs/example_i_ogs_bettina/" target="_blank">here</a> in more detail.
+The control file can be found <a href="https://github.com/pymanga/pyMANGA/blob/master/Benchmarks/ExampleSetups/ExmouthGulf/setup_pymanga.xml" target="_blank">here</a>.
 
 
 The control file describes the settings for each pyMANGA library (see
 <a href="/contribution/structure/" target="_blank">pyMANAGA structure</a> for more detail), namely
-- [tree_dynamics](/docs/steuerdatei/#tree_dynamics)
-- [initial_population](/docs/steuerdatei/#initial_population)
-- [tree_time_loop](/docs/steuerdatei/#tree_time_loop)
-- [visualization](/docs/steuerdatei/#visualization)
-- [tree_output](/docs/steuerdatei/#tree_output)
+- [resources](/docs/control_file/#resources)
+- [plant_dynamics](/docs/control_file/#plant_dynamics)
+- [population](/docs/control_file/#population)
+- [time_loop](/docs/control_file/#time_loop)
+- [visualization](/docs/control_file/#visualization)
+- [output](/docs/control_file/#output)
 
-The documentation of all control file input can be found <a href="https://jbathmann.github.io/pyMANGA/" target="_blank">here</a>.
-## ``tree_dynamics``
+The documentation of all control file input can be found <a href="https://pymanga.github.io/pyMANGA/pyMANGA.html" target="_blank">here</a>.
+## ``resources``
 
-Under the item "tree_dynamics" settings for the dynamic development of the tree population are listed.
+The "resources" item includes all settings for the dynamic development of the tree population.
 
-### ``aboveground_competition``
+### ``aboveground``
 
 This sub-item characterizes the modeling of resource availability over the ground.
 
-Since pyMANGA vegetation growth is a function of resources availability, these are the focus of this sub-item.
+Since pyMANGA vegetation growth is a function of resource availability, these are the focus of this sub-item.
 The above-ground resource relevant to pyMANGA represents the sunlight. 
 
 With the item, `type`, the type of the above-ground competition concept is defined.
@@ -41,10 +42,10 @@ In this concept, the model area is divided into zones in which the tree with the
 The class requires the input variables defined under the next item `domain`, namely `y_1`, `y_2`, `x_1` and `x_2`.
 They define the boundaries of the model domain.
 The coordinate values with the indices "1" define the numerically lower values, the indices "2" the numerically higher ones.
-`x_resolution` and `y_resolution` define the spatial discretization of the model domain with the number of grid nodes in the respective spatial direction.
+`x_resolution` and `y_resolution` define the spatial  discretization of the model domain with the number of grid nodes in the respective spatial direction.
 
 ```
-<aboveground_competition>
+<aboveground>
     <type> SimpleAsymmetricZOI </type>
     <domain>
         <x_1> 0 </x_1>
@@ -54,22 +55,22 @@ The coordinate values with the indices "1" define the numerically lower values, 
     <x_resolution> 720 </x_resolution>
     <y_resolution> 38 </y_resolution>
     </domain>
-</aboveground_competition>
+</aboveground>
 ```
 
-Currently, there is only one other `type`: "SimpleTest".
+Currently, there is only one other `type`: "Default".
 This type means there is no limitation in resource availability.
 It's thus not suitable for modeling real vegetation populations.
 
 Links:
-- [Source code 'SimpleAsymmetricZOI'](https://github.com/jbathmann/pyMANGA/blob/master/TreeModelLib/AbovegroundCompetition/SimpleAsymmetricZOI/SimpleAsymmetricZOI.py)
-- [Documentation 'SimpleAsymmetricZOI'](https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__tree_dynamics__aboveground_competition__SimpleAsymmetricZOI__SimpleAsymmetricZOI.html)
+- [Source code 'SimpleAsymmetricZOI'](https://github.com/pymanga/pyMANGA/blob/master/ResourceLib/AboveGround/SimpleAsymmetricZOI/SimpleAsymmetricZOI.py)
+- [Documentation 'SimpleAsymmetricZOI'](https://pymanga.github.io/pyMANGA/pyMANGA/ResourceLib/AboveGround/SimpleAsymmetricZOI/SimpleAsymmetricZOI.html)
 
-### `belowground_competition`
+### `belowground`
 
 This sub-item characterizes the modeling of resource availability below the ground.
 
-In this setup, the class "OGSLargeScale3D" is used (sub-item `type`), which is designed for modeling the change in salinity in the pore water using a more complex groundwater model. 
+In this example setup, the class "OGSLargeScale3D" is used (sub-item `type`), which is designed for modeling the change in salinity in the pore water using a more complex groundwater model. 
 
 In the sub-item `ogs_project_folder`, the file path of the OGS input files is defined, in the next step the name of the OGS control file (`ogs_project_folder`).
 
@@ -88,7 +89,7 @@ This specification is optional; the necessity depends on the complexity of the g
 In this model, the file provides a loop of the tidal range information read from the EXM_Jan-Jul_2019.txt file and a dynamic adjustment of the mean water level.
 
 ```
-<belowground_competition>
+<belowground>
     <type> OGSLargeScale3D </type>
     <ogs_project_folder> /your/path/to/pyMANGA/Benchmarks/Exmouth_Gulf/full_model </ogs_project_folder>
     <ogs_project_file> testmodel.prj </ogs_project_file>
@@ -100,42 +101,42 @@ In this model, the file provides a loop of the tidal range information read from
     <!--bulk_mesh> testbulk.vtu </bulk_mesh-->
     <!--use_old_ogs_results>True</use_old_ogs_results-->
     <python_script>python_script.py</python_script>
-</belowground_competition>
+</belowground>
 ```
 
 Links:
-- [Source code 'OGSLargeScale3D'](https://github.com/jbathmann/pyMANGA/blob/master/TreeModelLib/BelowgroundCompetition/OGSLargeScale3D/OGSLargeScale3D.py)  
-- [Documentation 'OGSLargeScale3D'](https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__tree_dynamics__belowground_competition__OGSLargeScale3D__OGSLargeScale3D.html)
+- [Source code 'OGSLargeScale3D'](https://github.com/pymanga/pyMANGA/blob/master/ResourceLib/BelowGround/Individual/OGSLargeScale3D/OGSLargeScale3D.py)  
+- [Documentation 'OGSLargeScale3D'](https://pymanga.github.io/pyMANGA/pyMANGA/ResourceLib/BelowGround/Individual/OGSLargeScale3D.html)
 
-### `tree_growth_and_death`
+## `plant_dynamics`
 
-The third and last main item of the ``tree_dynamics`` section, defines the dynamic concept of tree growth and death.
-In our example, we use the "SimpleBettina" concept.
+Inside of the item "plant_dynamics", the dynamic concept of tree growth and death is configured.
+In our example, we use the "Bettina" concept.
 For more information, see this <a href="https://doi.org/10.1016/j.ecolmodel.2018.10.005" target="_blank">publication</a>.
 The concept does not need any further parameters.
 
 ```
-<tree_growth_and_death>
-    <type> SimpleBettina </type>
-</tree_growth_and_death>
+<plant_dynamics>
+    <type> Bettina </type>
+</plant_dynamics>
 ```
-If nothing else is defined, tree die of mechanistic reasons, i.e. when maintenance cost are higher than resource uptake.
+If nothing else is defined, trees die of mechanistic reasons, i.e. when maintenance cost are higher than resource uptake.
 The mortality concept can be changed by adding the sub-item ``mortality`` and the parameters required for the concept.
 
 ```
-<tree_growth_and_death>
-    <type> SimpleBettina </type>
+<plant_dynamics>
+    <type> Bettina </type>
     <mortality>RandomGrowth</mortality>
     <k_die> 1e-9 </k_die>
-</tree_growth_and_death>
+</plant_dynamics>
 ```
 
 Links:
-- [Source code 'SimpleBettina'](https://github.com/jbathmann/pyMANGA/blob/master/TreeModelLib/GrowthAndDeathDynamics/SimpleBettina/SimpleBettina.py)  
-- [Documentation 'SimpleBettina'](https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__tree_dynamics__tree_growth_and_death__SimpleBettina__SimpleBettina.html)
+- [Source code 'Bettina'](https://github.com/pymanga/pyMANGA/blob/master/PlantModelLib/Bettina/Bettina.py)  
+- [Documentation 'Bettina'](https://pymanga.github.io/pyMANGA/pyMANGA/PlantModelLib/Bettina/Bettina.html)
 
 
-## ``initial_population``
+## ``population``
 
 This section defines the tree population at the beginning of the modeling period (initial conditions) and the recruitment of trees at each time step.
 
@@ -146,7 +147,7 @@ In this setup, there are exactly these two groups.
 The item `species` specifies the type of trees.
 Currently, only the gray mangrove (Avicennia marina) with the class "Avicennia " is selectable.
 If a path is provided for this sub-item, the user can provide an individual species file where all required attributes need to be defined.
-To see which attributes are required, please check the default file for <a href="https://github.com/jbathmann/pyMANGA/blob/master/PopulationLib/Species/Avicennia.py" target="_blank">Avicennia</a>.
+To see which attributes are required, please check the default file for <a href="https://github.com/pymanga/pyMANGA/blob/master/PopulationLib/Species/Avicennia.py" target="_blank">Avicennia</a>.
 
 Under ``distribution`` the distribution of the trees, i.e. the spatial arrangement in the model area, is determined.
 Under ``type`` this can either be read from a file with "GroupFromFile" or - as in this setup - randomly arranged with "random".
@@ -157,14 +158,14 @@ The properties of the recruited trees correspond to those defined in the species
 
 In the "Recruiting" group, ``n_individuals`` is set to zero, and "n_recruitment_per_step" is set to 30.
 This shows that this first group is used to integrate new trees over the entire model runtime.
-Since ``n_individuals`` must be specified, but `n_recruitment_per_step` is optional, only `n_individuals` is specified as 30 in the second group "Inital".
+Since ``n_individuals`` must be specified, but `n_recruitment_per_step` is optional, only `n_recruitment_per_step` is specified as 30 in the second group "Inital".
 So, at the beginning of the simulation, there should be 30 trees randomly distributed in the model domain and we each time step, 30 new trees are recruited.
 
 ```
-<initial_population>
+<population>
     <group>
         <name> Recruiting </name>
-        <species> /your/path/to/pyMANGA/Benchmarks/Exmouth_Gulf/full_model/Avicennia.py </species>
+        <species> Avicennia </species>
         <distribution>
             <type> Random </type>
             <domain>
@@ -177,13 +178,13 @@ So, at the beginning of the simulation, there should be 30 trees randomly distri
             <n_recruitment_per_step> 30 </n_recruitment_per_step>
         </distribution>
     </group>
-</initial_population>
+</population>
 ```
 
 Links:
-- [Documentation 'initial population'](https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__initial_population__group__group.html)
+- [Documentation 'population'](https://pymanga.github.io/pyMANGA/pyMANGA/PopulationLib/Population.html)
 
-## ``tree_time_loop``
+## ``time_loop``
 
 Here the model is discretized in time.
 
@@ -192,12 +193,12 @@ That is, all time steps are of the same size over the entire simulation.
 The start time (`t_start`), end time (`t_end`) and the time step length (`delta_t`) must be specified in seconds.
 
 ````
-<tree_time_loop>
+<time_loop>
     <type> Simple </type>
     <t_start> 0 </t_start>
     <t_end> 157788000000 </t_end>
     <delta_t> 15778800 </delta_t>
-</tree_time_loop>
+</time_loop>
 ````
 
 ## ``visualization``
@@ -212,7 +213,7 @@ With "SimplePyplot" the position and the crown radius of trees would be visualiz
 </visualization>
 ```
 
-## ``tree_output``
+## ``output``
 
 The last section, defines how model results are saved.
 
@@ -230,10 +231,10 @@ If it is false (default) and the directory is not empty, the simulation will not
 With the items ``geometry_output`` geometric dimensions can be added to the output file.
 The variables selected in this setup are "r_stem" (stem radius), "h_stem" (stem height), "r_crown" (crown height) and "r_root" (root radius).
 With the item ``growth_output`` information from the tree growth concept can be saved.
-Other optional output options can be found in the <a href="https://jbathmann.github.io/pyMANGA/project_dox__MangaProject__tree_output__tree_output.html" target="_blank">documentation</a>.
+Other optional output options can be found in the <a href="https://pymanga.github.io/pyMANGA/pyMANGA/ModelOutputLib.html" target="_blank">output documentation</a>.
 
 ````
-<tree_output>
+<output>
     <type> OneTimestepOneFile </type>
     <output_each_nth_timestep> 1 </output_each_nth_timestep>
     <output_dir> /your/path/to/pyMANGA/Benchmarks/Exmouth_Gulf/full_model/TreeOutput </output_dir>
@@ -242,5 +243,5 @@ Other optional output options can be found in the <a href="https://jbathmann.git
     <geometry_output> r_crown </geometry_output>
     <geometry_output> r_root </geometry_output>
     <growth_output> salinity </growth_output>
-</tree_output>
+</output>
 ````
