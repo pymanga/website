@@ -12,7 +12,7 @@ description:
     }
 </style>
 
-## Requirements 
+## 1 Requirements 
 
 The software **pyMANGA** is written in the programming language [Python](https://www.python.org/) and uses Python libraries. 
 That means, during the installation a local library with different **Python modules** will be installed on your computer.
@@ -23,7 +23,27 @@ Those IDEs make code easier to read and support the installation and management 
 Our team is happy to use [PyCharm](https://www.jetbrains.com/pycharm/) and [Spyder](https://www.spyder-ide.org/), respectively.
 Both IDEs offer a free version.
 
-## Install Python and Python Modules
+## 2 Download pyMANGA 
+
+First you need to download the current version of **pyMANGA**.  
+You can do this either by cloning the [git-repositories](https://github.com/pymanga/pyMANGA/ "https://github.com/pymanga/pyMANGA/") (for advanced users) or by following the instructions below.  
+
+The current version of **pyMANGA** can be found on this [homepage](https://github.com/pymanga/pyMANGA/ "https://github.com/pymanga/pyMANGA/").
+Download the source code of the program as shown in <a href="/docs/getting_started/installation/#Figure_1">Figure 1</a> as zip file.
+
+<figure class="alert">
+     <img id="Figure_1" src="/pictures/getting_started/installation_of_pymanga/download_pymanga_ubuntu.png" title="Figure 1: You can download pyMANGA from the publicly available git repository.">
+	 <figcaption>
+     	<i><br><strong>Figure 1:</strong> You can download pyMANGA from the publicly available git repository.</i>
+     </figcaption>
+</figure>
+
+This zip file must now be unpacked to any location. This example uses the root of your C:\ drive.
+Make sure that there are no spaces and no umlauts (like ä,ö,ü,ß) in the file path.
+This folder contains all the program components of **pyMANGA**, including ***MANGA.py***, which is the execution file that must be called to execute the program.
+Furthermore, the folder contains a collection of benchmarks.
+
+## 3 Install Python and Python Modules
 
 In the following, we describe how to install the following software
 
@@ -32,7 +52,7 @@ In the following, we describe how to install the following software
 
 Because the installation differs between operating systems, please select your operating system below.
 
-### Ubuntu
+### 3.1 Ubuntu
 
 <details>
 <summary>Installation of Python in Ubuntu</summary>
@@ -114,7 +134,7 @@ The calculation of a first example setup is explained in the section  <a href="/
 
 </details>
 
-### Windows
+### 3.2 Windows
 
 <details>
 <summary>Installation of Python in Windows</summary>
@@ -122,28 +142,28 @@ The calculation of a first example setup is explained in the section  <a href="/
 To run **pyMANGA**, you must first obtain an **interpreter** for the **Python** programming language.
 An example would be **python<sup>T</sup><sup>M</sup>**.
 To do this, open your browser and go to [python.org](https://www.python.org/).
-In the drop-down menu under ***Download*** you will find the current release version for your operating system of **Python** (this manual describes the procedure for Windows, see <a href="/docs/getting_started/installation/#Figure_1">Figure 1</a>).
+In the drop-down menu under ***Download*** you will find the current release version for your operating system of **Python** (this manual describes the procedure for Windows, see <a href="/docs/getting_started/installation/#Figure_2">Figure 2</a>).
 
 <figure class="alert">
-     <img id="Figure_1" src="/pictures/getting_started/installation_of_pymanga/download_python_windows_1.jpg" title="Figure 1: Select the python version suitable for Windows on python.org.">
+     <img id="Figure_2" src="/pictures/getting_started/installation_of_pymanga/download_python_windows_1.jpg" title="Figure 2: Select the python version suitable for Windows on python.org.">
 	 <figcaption>
-     	<i><br><strong>Figure 1:</strong> Select the python version suitable for Windows on python.org.</i>
+     	<i><br><strong>Figure 2:</strong> Select the python version suitable for Windows on python.org.</i>
      </figcaption>
 </figure>
 
 <figure class="alert">
-     <img id="Figure_2" src="/pictures/getting_started/installation_of_pymanga/download_python_windows_2.jpg" title="Figure 2: Select Python version 3.7.x from the list of available releases.">
+     <img id="Figure_3" src="/pictures/getting_started/installation_of_pymanga/download_python_windows_2.jpg" title="Figure 3: Select Python version 3.7.x from the list of available releases.">
 	 <figcaption>
-     	<i><br><strong>Figure 2:</strong> Select Python version 3.7.x from the list of available releases.</i>
+     	<i><br><strong>Figure 3:</strong> Select Python version 3.7.x from the list of available releases.</i>
      </figcaption>
 </figure>
 
-Execute the downloaded file (***python-3.7.7-amd64.exe***) like a normal Windows exe and install it on your computer (see <a href="/docs/getting_started/installation/#Figure_3">Figure 3</a>). 
+Execute the downloaded file (***python-3.7.7-amd64.exe***) like a normal Windows exe and install it on your computer (see <a href="/docs/getting_started/installation/#Figure_4">Figure 4</a>). 
 
 <figure class="alert">
-     <img id="Figure_3" src="/pictures/getting_started/installation_of_pymanga/installation_python_windows.jpg" title="Figure 3: Run the downloaded file and install python by following the instructions.">
+     <img id="Figure_4" src="/pictures/getting_started/installation_of_pymanga/installation_python_windows.jpg" title="Figure 4: Run the downloaded file and install python by following the instructions.">
 	 <figcaption>
-     	<i><br><strong>Figure 3:</strong> Run the downloaded file and install python by following the instructions.</i>
+     	<i><br><strong>Figure 4:</strong> Run the downloaded file and install python by following the instructions.</i>
      </figcaption>
 </figure>
 
@@ -157,63 +177,51 @@ This completes the **Python** installation.
 
 To install python modules, we use the **"Command Prompt"**.
 You can easily find it by typing **"Command Prompt"** in the windows search window and opening it with a **mouse click**.
-Since pyMANGA is a command line program, everything happens in the command prompt (see <a href="/docs/getting_started/installation/#Figure_4">Figure 4</a>).
+Since pyMANGA is a command line program, everything happens in the command prompt (see <a href="/docs/getting_started/installation/#Figure_5">Figure 5</a>).
 
 <figure class="alert">
-     <img id="Figure_4" src="/pictures/getting_started/installation_of_pymanga/open_command_prompt.jpg" title="Figure 4: Start the command prompt">
+     <img id="Figure_5" src="/pictures/getting_started/installation_of_pymanga/open_command_prompt.jpg" title="Figure 5: Start the command prompt">
 	 <figcaption>
-     	<i><br><strong>Figure 4:</strong> Start the command prompt.</i>
+     	<i><br><strong>Figure 5:</strong> Start the command prompt.</i>
      </figcaption>
 </figure>
 
-Now, we install all python modules that are needed to run pyMANGA. As a reminder, the [requirement file](https://github.com/pymanga/pyMANGA/blob/master/requirements.txt) lists all modules that we need to install. Please download the requirements file by clicking the three dots on the right hand side of the github page and select "Download". Save the file e.g. in the root of your C: drive.
-In the command prompt navigate to the folder you saved the requirements file to by using the `cd` command. If you saved the file to the root of your C: drive you can use the following command to navigate to the folder:  
+Now, we install all python modules that are needed to run pyMANGA. As a reminder, the [requirement file](https://github.com/pymanga/pyMANGA/blob/master/requirements.txt) lists all modules that we need to install and is included in the pyMANGA folder you downloaded earlier (<a href="/docs/getting_started/installation/#2-download-pymanga">Download pyMANGA</a>). 
+In the command prompt navigate to your pyMANGA folder by using the `cd` command. If you saved the file to the root of your C:\ drive you can use the following command to navigate to the folder:  
 
-	cd C:\
+	cd C:\pyMANGA
 
-Pip lets us install all modules that are listed in the requirement file with one line of code. This might take a couple minutes. Type or copy the following code into the **command prompt** to install all needed modules (see <a href="/docs/getting_started/installation/#Figure_5">Figure 5</a>).  
+Pip lets us install all modules that are listed in the requirement file with one line of code. This might take a couple minutes. Type or copy the following code into the **command prompt** to start the installation (see <a href="/docs/getting_started/installation/#Figure_6">Figure 6</a>).  
 
 	py -3.7 -m pip install -r requirements.txt
 
 <figure class="alert">
-     <img id="Figure_5" src="/pictures/getting_started/installation_of_pymanga/install_packages_windows.png" title="Figure 5: Install the needed python packages using the command prompt.">
+     <img id="Figure_6" src="/pictures/getting_started/installation_of_pymanga/install_packages_windows.png" title="Figure 6: Install the needed python packages using the command prompt.">
 	 <figcaption>
-     	<i><br><strong>Figure 5:</strong> Install the needed python packages using the command prompt.</i>
+     	<i><br><strong>Figure 6:</strong> Install the needed python packages using the command prompt.</i>
      </figcaption>
 </figure>
 
-Note: If the prompt says that ***pip*** is not up-to-date, you can use **upgrade** ***pip*** to update it.
+Note: If the prompt says that ***pip*** is not up-to-date, you can use `upgrade pip` to update it.
 However, this is not mandatory.
 
-Some explanations: `py` means you are calling **Python**. 
-Where `-3.7` is the version you are using.
-`-m` means you are calling a module, in this case `pip`, which is used to `install` other **modules**.
-Finally, the `-r` flag tells `pip` to read the **requirements** file and install all modules listed in it.
 Now the preparations for using the **compiler** are finished.
 
+<details>
+<summary>Further explanations</summary>
+
+- `cd` is short for **change directories** and is used to navigate to a specific folder.  
+- `py` means you are calling **Python**. Where `-3.7` is the version you are using.
+- `-m` means you are calling a module, in this case `pip`, which is used to `install` other **modules**.
+- The `-r` flag tells `pip` to read the **requirements** file and install all modules listed in it.
+  
+</details>
 
 </details>
 
-## Install pyMANGA
+## 4 Install pyMANGA
 
 After you have set up **Python** on your computer, the next step is to install **pyMANGA**.
-You can do this either by cloning the [git-repositories](https://github.com/pymanga/pyMANGA/ "https://github.com/pymanga/pyMANGA/") (for advanced users) or by following the instructions below.
-
-The current version of **pyMANGA** can be found on this [homepage](https://github.com/pymanga/pyMANGA/ "https://github.com/pymanga/pyMANGA/").
-Download the source code of the program as shown in <a href="/docs/getting_started/installation/#Figure_6">Figure 6</a> as zip file.
-
-<figure class="alert">
-     <img id="Figure_6" src="/pictures/getting_started/installation_of_pymanga/download_pymanga_ubuntu.png" title="Figure 6: You can download pyMANGA from the publicly available git repository.">
-	 <figcaption>
-     	<i><br><strong>Figure 6:</strong> You can download pyMANGA from the publicly available git repository.</i>
-     </figcaption>
-</figure>
-
-This zip file must now be unpacked to any location. This example uses the root of your C: drive.
-Make sure that there are no spaces and no umlauts (like ä,ö,ü,ß) in the file path.
-This folder contains all the program components of **pyMANGA**, including ***MANGA.py***, which is the execution file that must be called to execute the program.
-Furthermore, the folder contains a collection of benchmarks.
-
 The execution of **pyMANGA** is platform dependent, too.
 
 <details>
@@ -235,10 +243,9 @@ the program will be started.
 <details>
 <summary>pyMANGA execution in Windows</summary>
 
-To execute pyMANGA, open the command prompt again. If you are unsure how to open and use the command prompt, please refer to the instructions in the section [Installation of Python Modules in Windows](###Windows).  
-Navigate to the folder where you saved the pyMANGA files by using the `cd` command. Please adjust the following code if your pyMANGA folder is not save in the root of your C: drive.
+To execute pyMANGA, open the command prompt again. If you are unsure how to open and use the command prompt, please refer to the instructions in the section [Installation of Python Modules in Windows](###Windows). If you closed the command prompt make sure to navigate to the pyMANGA folder again (e.g. `cd C:\pyMANGA`).  
+Now we can run pyMANGA and check the **help** by typing the following command:
 
-	cd C:\pyMANGA
 	py MANGA.py -h
 
 Again, `py` means Python is called, `MANGA.py` represents the file to be called, and the `-h` flag calls the help.
