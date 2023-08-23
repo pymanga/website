@@ -243,14 +243,21 @@ the program will be started.
 <details>
 <summary>pyMANGA execution in Windows</summary>
 
-To execute pyMANGA, open the command prompt again. If you are unsure how to open and use the command prompt, please refer to the instructions in the section [Installation of Python Modules in Windows](###Windows). If you closed the command prompt make sure to navigate to the pyMANGA folder again (e.g. `cd C:\pyMANGA`).  
+To execute pyMANGA, open the command prompt again. If you are unsure how to open and use the command prompt, please refer to the instructions in the section [Installation of Python Modules in Windows](#32-windows). If you closed the command prompt make sure to navigate to the pyMANGA folder again (e.g. `cd C:\pyMANGA`).  
 Now we can run pyMANGA and check the **help** by typing the following command:
 
 	py MANGA.py -h
 
-Again, `py` means Python is called, `MANGA.py` represents the file to be called, and the `-h` flag calls the help.
+Again, `py` means Python is called, `MANGA.py` represents the file to be called, and the `-h` flag calls the help. If everything works, pyMANGA provides possible arguments and how to use them to run the program with a project file (<a href="/docs/getting_started/installation/#Figure_7">Figure 7</a>). In the <a href="/docs/getting_started/first_applications_of_pymanga/">next section</a> we will explain how to run pyMANGA with a project file.
+
+<figure class="alert">
+     <img id="Figure_7" src="/pictures/getting_started/first_applications_of_pymanga/running_pymanga.jpg" title="Figure 7: pyMANGAs console output provides an example how to use the program and how to properly input a project file.">
+	 <figcaption>
+     	<i><br><strong>Figure 7:</strong> pyMANGAs console output provides an example how to use the program and how to properly input a project file.</i>
+     </figcaption>
+</figure>
 
 Note: To find your file path, **right-click** on the ***pyMANGA*** **folder** and go to **Properties**.
-Here you will find the information about the location of the folder to which you have to add to the **name** of the **folder**
+Here you will find information about the location of the folder. To access the folder, you have to add the **name** of the **folder** (e.g. `/pyMANGA`) to the file-path.
 
 </details>

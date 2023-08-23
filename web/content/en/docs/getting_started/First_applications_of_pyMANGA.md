@@ -12,40 +12,19 @@ description:
     }
 </style>
 
-
-Before you start with first applications, if you haven't already done so, you should read the <a href="/docs/getting_started/installation">installation and preparation instructions</a> for your operating system.
-This is especially recommended for beginners who have little experience with **Python** and the input console.
-These instructions are generally suitable for all three operating systems (Ubuntu, Windows).
-
+Before you get started with your first applications, you should read the <a href="/docs/getting_started/installation">installation and preparation instructions</a> for your operating system, if you haven't already done so.  
+This is especially recommended for beginners who have little experience with **Python** and the input console.  
+Instructions are provided for Windows and Ubuntu and should be applicable to other operating systems with minor tweaks.
 
 ## 1 Setup without OpenGeoSys
 
-> Here, we explain how to run a simple pyMANGA setup
-> In this setup, 10 black mangrove trees grow at seawater salinity. 
-> Tree growth follows the BETTINA approach.
+> Here, we explain how to run a simple pyMANGA setup.  
+> In this setup, 10 black mangrove trees grow at seawater salinity.  
+> Tree growth follows the BETTINA approach.  
 > Model output is written to the folder 'ModelOutput' in the same directory.  
 > More examples can be found [here](/docs/benchmarks/) and in our [benchmark gallery](https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/).
 
-First you have to use the console interface again to navigate to the file location of the **pyMANGA** main level.
-Entering then for **Windows**
-
-	py -3.7 MANGA.py -h
-
-respectively for **Ubuntu**
-
-	python3 MANGA.py -h
-
-starts **pyMANGA** and displays all available input options (-h stands for help).
-
-<figure class="alert">
-     <img id="Figure_1" src="/pictures/getting_started/first_applications_of_pymanga/running_pymanga.jpg" title="Figure 1: pyMANGA is run through the command line and can be executed with different options.">
-	 <figcaption>
-     	<i><br><strong>Figure 1:</strong> pyMANGA is run through the command line and can be executed with different options.</i>
-     </figcaption>
-</figure>
-
-Here you can see that the ***MANGA.py*** file has been executed and is waiting for further input.
-So the start of **pyMANGA** was successful, and you can test the first example.
+After following the [installation](/docs/getting_started/installation) section, pyMANGA is installed and tested by running `py MANGA.py -h` in the command line. We can now provide a project file to **pyMANGA** and execute an example setup.
 
 To do so, you need to add the path to the pyMANGA project file as input.  
 For **Windows** type:
