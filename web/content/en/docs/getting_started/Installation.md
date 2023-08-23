@@ -251,6 +251,6 @@ Now we can run pyMANGA and check the **help** by typing the following command:
 Again, `py` means Python is called, `MANGA.py` represents the file to be called, and the `-h` flag calls the help.
 
 Note: To find your file path, **right-click** on the ***pyMANGA*** **folder** and go to **Properties**.
-Here you will find the information about the location of the folder to which you have to add a \ to the **name** of the **folder**
+Here you will find the information about the location of the folder to which you have to add to the **name** of the **folder**
 
 </details>
