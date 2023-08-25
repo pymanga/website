@@ -12,37 +12,19 @@ description:
     }
 </style>
 
+Before you get started with your first applications, you should read the <a href="/docs/getting_started/installation">installation and preparation instructions</a> for your operating system, if you haven't already done so.  
+This is especially recommended for beginners who have little experience with **Python** and the input console.  
+Instructions are provided for Windows and Ubuntu and should be applicable to other operating systems with minor tweaks.
 
-Before you start with first applications, if you haven't already done so, you should read the <a href="/docs/getting_started/installation">installation and preparation instructions</a> for your operating system.
-This is especially recommended for beginners who have little experience with **Python** and the input console.
-These instructions are generally suitable for all three operating systems (Ubuntu, Windows).
+## 1 Setup without OpenGeoSys
 
-
-## Setup without OpenGeoSys
-
-> Here, we explain how to run a simple pyMANGA setup
-> In this setup, 10 black mangrove trees grow at seawater salinity. 
-> Tree growth follows the BETTINA approach.
+> Here, we explain how to run a simple pyMANGA setup.  
+> In this setup, 10 black mangrove trees grow at seawater salinity.  
+> Tree growth follows the BETTINA approach.  
 > Model output is written to the folder 'ModelOutput' in the same directory.  
-> More examples can be found [here](/docs/benchmarks/) and in our [benchmark gallery](https://github.com/jbathmann/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/).
+> More examples can be found [here](/docs/benchmarks/) and in our [benchmark gallery](https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/).
 
-First you have to use the console interface again to navigate to the file location of the **pyMANGA** main level.
-Entering then for **Windows**
-
-	py -3.7 MANGA.py -h
-
-respectively for **Ubuntu**
-
-	python3 MANGA.py -h
-
-starts **pyMANGA** and displays all available input options (-h stands for help).
-
-<figure class="alert">
-     <img id="Figure_1" src="/pictures/getting_started/first_applications_of_pymanga/running_pymanga.jpg">
-</figure>
-
-Here you can see that the ***MANGA.py*** file has been executed and is waiting for further input.
-So the start of **pyMANGA** was successful, and you can test the first example.
+After following the [installation](/docs/getting_started/installation) section, pyMANGA is installed and tested by running `py MANGA.py -h` in the command line. We can now provide a project file to **pyMANGA** and execute an example setup.
 
 To do so, you need to add the path to the pyMANGA project file as input.  
 For **Windows** type:
@@ -59,7 +41,7 @@ This code calls **pyMANGA** with the control file 'example_setup.xml'.
 For detailed information on the structure of control files see chapter [Control File](/docs/control_file/)
 
 
-## Setup with OpenGeoSys
+## 2 Setup with OpenGeoSys
 
 > Here, we explain how to run the complex pyMANGA setup 'OGS3D_SAZOI_BETTINA' from our [benchmark gallery](https://github.com/jbathmann/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/GrowthAndDeath/SimpleBettina).
 > More information on our benchmarks can be found [here](/docs/benchmarks/),
@@ -111,48 +93,67 @@ Now you can start the next application example by opening a terminal in the **py
 <summary>First applications of pyMANGA with OGS in Windows</summary>
 
 To use **OGS** you have to download and install it first.
-To do so, go to the following [website](https://www.opengeosys.org/releases/ "https://www.opengeosys.org/releases/") and scroll down until you find **version 6.3.0** and download it (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_7">Figure 7</a> and <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_8">Figure 8</a>).
+To do so, go to the following [website](https://www.opengeosys.org/releases/ "https://www.opengeosys.org/releases/") and scroll down until you find **version 6.4.0** and download it (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_2">Figure 2</a> and <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_3">Figure 3</a>).
 
 <figure class="alert">
-     <img id="Figure_7" src="/pictures/getting_started/first_applications_of_pymanga/version_ogs_windows.jpg">
+     <img id="Figure_2" src="/pictures/getting_started/first_applications_of_pymanga/version_ogs_windows.jpg" title="Figure 2: OGS version selection">
+	 <figcaption>
+     	<i><br><strong>Figure 2:</strong> OGS version selection.</i>
+     </figcaption>
+</figure>
 </figure>
 
 <figure class="alert">
-     <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/download_ogs_windows.jpg">
+     <img id="Figure_3" src="/pictures/getting_started/first_applications_of_pymanga/download_ogs_windows.jpg" title="Figure 3: Make sure to select the correct version including Python bindings.">
+	 <figcaption>
+     	<i><br><strong>Figure 3:</strong> Make sure to select the correct version including Python bindings.</i>
+     </figcaption>
 </figure>
 
 
 Select the file to be downloaded according to your operating system.
-Then unzip the zip file, copy the ***bin*** folder and paste it into the ***pyMANGA-master*** folder in the following path (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_9">Figure 9</a>).
+Then unzip the zip file, copy the ***bin*** folder and paste it into the ***pyMANGA-master*** folder in the following path (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_4">Figure 4</a>).
 
 	pyMANGA-master\ResourceLib\BelowGround\OGS
 
 <figure class="alert">
-     <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg">
+     <img id="Figure_4" src="/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg" title="Figure 4: OGS location within pyMANGA.">
+	 <figcaption>
+     	<i><br><strong>Figure 4:</strong> OGS location within pyMANGA.</i>
+     </figcaption>
 </figure>
 
 
-**OGS** is now installed. To test if it works properly, open the ***_Bin_*** folder, press **shift** and the **right mouse button** and select **Open PowerShell window here** (see Figure <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_10">Figure 10</a>).
+**OGS** is now installed. To test if it works properly, open the ***_Bin_*** folder, press **shift** and the **right mouse button** and select **Open PowerShell window here** (see Figure <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_5">Figure 5</a>).
 
 <figure class="alert">
-     <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/ogs_powershell.jpg">
+     <img id="Figure_5" src="/pictures/getting_started/first_applications_of_pymanga/ogs_powershell.jpg" title="Figure 5: Open PowerShell in the correct location with shift+right click.">
+	 <figcaption>
+     	<i><br><strong>Figure 5:</strong> Open PowerShell in the correct location with shift+right click.</i>
+     </figcaption>
 </figure>
 
 
 Copy the path that appears in the **PowerShell window** and append ***\OGS*** and press Enter.
-The following <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_11">Figure 11</a> shows the PowerShell window output when OGS is running smoothly. 
+The following <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_6">Figure 6</a> shows the PowerShell window output when OGS is running smoothly. 
 
 <figure class="alert">
-     <img id="Figure_11" src="/pictures/getting_started/first_applications_of_pymanga/output_ogs_runs.jpg">
+     <img id="Figure_6" src="/pictures/getting_started/first_applications_of_pymanga/output_ogs_runs.jpg" title="Figure 6: If your PowerShell output looks like this, OGS is installed properly.">
+	 <figcaption>
+     	<i><br><strong>Figure 6:</strong> If your PowerShell output looks like this, OGS is installed properly.</i>
+     </figcaption>
 </figure>
 
 Now you can start the next application example by opening the command prompt in the ***pyMANGA-master*** folder and starting pyMANGA as usual.
-Then enter the following command (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_12">Figure 12</a>).
+Then enter the following command (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_7">Figure 7</a>).
 
 	py -3.7 MANGA.py -i \Benchmarks\ExampleSetups\OGSExampleSetup\OGS3D_SAZOI_BETTINA.xml
 
 <figure class="alert">
-     <img id="Figure_12" src="/pictures/getting_started/first_applications_of_pymanga/run_ogs_sample_setup.jpg">
+     <img id="Figure_7" src="/pictures/getting_started/first_applications_of_pymanga/run_ogs_sample_setup.jpg" title="Figure 7: Example run of pyMANGA with OGS enabled.">
+	 <figcaption>
+     	<i><br><strong>Figure 7:</strong> Example run of pyMANGA with OGS enabled.</i>
+     </figcaption>
 </figure>
 
 
@@ -168,10 +169,13 @@ and changing the line 22 to
 This is the time step length, which indicates how long the groundwater flow model calculates before the rest of the BETTINA time step is extrapolated, given in seconds.
 
 From the results the pore-water distribution is extrapolated under steady state assumptions.
-Consequently, this parameter has to be used very carefully but is a means to significantly reduce computing time (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_13">Figure 13</a>).
+Consequently, this parameter has to be used very carefully but is a means to significantly reduce computing time (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_8">Figure 8</a>).
 
 <figure class="alert">
-     <img id="Figure_12" src="/pictures/getting_started/first_applications_of_pymanga/set_timestep_length.jpg">
+     <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/set_timestep_length.jpg" title="Figure 8: You can modify the time step length to reduce runtime (line 22).">
+	 <figcaption>
+     	<i><br><strong>Figure 8:</strong> You can modify the time step length to reduce runtime (line 22).</i>
+     </figcaption>
 </figure>
 
 </details>
