@@ -32,6 +32,8 @@ Type names start with a capital letter and have a capital letter for each new wo
 Variable names are lowercase names with underscores: *_my_exciting_member_variable*. But be consistent in a file!
 #### Function Names
 Function names should represent an action. Regular functions start lowercase an then camel case. Accessors and mutators match the name of the variable with a "get" or "set" prefix: *doSomeStuff()*, *doSomeStuffOnThing()*, *getMyExcitingMemberVariable()*, *setMyExcitingMemberVariable()*.
+#### Module Names
+Module names start with a capital letter and then camel case. If modules use single inheritance use the parent name first and add the new name, e.g. BettinaNetwork has the parent class Bettina. For multiple inheritance use the method resolution order, e.g., NetworkFixedSalinity which resolves Network first and then FixedSalinity. One-word names are strongly recommended. Also, avoid new modules if switches in existing modules are sufficient.
 
 ## Comments
 
