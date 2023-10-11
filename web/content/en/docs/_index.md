@@ -5,6 +5,10 @@ menu:
   main:
     weight: 2
 ---
+
+----------
+
+
 Here we provide a hands-on guide on how to use pyMANGA on varying operating systems.
 We explain what inputs are needed, how pyMANGA itself could be started and what outputs are created (<a href="/docs/#Figure_1">Figure 1</a>).
 
