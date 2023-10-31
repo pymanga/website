@@ -1,4 +1,4 @@
-baseURL = "http://pymanga.forst.tu-dresden.de/"
+baseURL = "https://pymanga.forst.tu-dresden.de/"
 title = "pyMANGA"
 
 enableRobotsTXT = true
