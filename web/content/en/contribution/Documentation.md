@@ -7,7 +7,7 @@ weight: 4
 ---
 
 Our documentation is available [here](https://pymanga.github.io/pyMANGA/pyMANGA.html).  
-The documentation is build on [pdoc](https://pdoc.dev/), a tool for python to auto-generate API documentation. If you want to contribute to the documentation, we recommend to clone to [source code](/contribution/download) repository and build the documentation locally for testing purposes before creating a pull request. 
+The documentation is build on [pdoc](https://pdoc.dev/), a tool for python to auto-generate API documentation. If you want to contribute to the documentation, we recommend to clone the [source code](/contribution/download) repository and build the documentation locally for testing purposes before creating a pull request. 
 
 ## Building the documentation locally
 
