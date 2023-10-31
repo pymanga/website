@@ -57,7 +57,6 @@ Let's create a documentation for the sub-library *AboveGround* from the *Resourc
 This tells pdoc to include the Markdown file and parse it for the documentation. Everything else written inside of the docstring (`"""`) is also included in the documentation. This could look like this:
 
     """
-    Created on Thu Oct 8 15:20:03 2023
 
     @author: johndoe  
 
