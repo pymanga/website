@@ -58,7 +58,6 @@ This tells pdoc to include the Markdown file and parse it for the documentation.
 
     """
 
-    @author: johndoe  
 
     .. include:: ./Aboveground.md
     """
