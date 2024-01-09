@@ -1,7 +1,7 @@
 
 ---
 title: Create new modules
-linkTitle: Set up new modules
+linkTitle: Create new modules
 weight: 5
 
 ---
