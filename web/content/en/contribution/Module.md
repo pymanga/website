@@ -1,6 +1,6 @@
 
 ---
-title: Set up new modules
+title: Create new modules
 linkTitle: Set up new modules
 weight: 5
 
