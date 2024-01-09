@@ -8,7 +8,7 @@ weight: 5
 
 pyMANGA is designed to be modular and extensible. This means, that new modules can be added to the framework to extend the functionality of pyMANGA. This guide aims to provide instructions on how to implement new modules so that the overall structure of pyMANGA is maintained and the new module is compatible with the way pyMANGA runs simulations.  
 
-This guide will use the plant model concept `Bettina` as an example to explain all requirements for building a module. As part of the plant models, `Bettina` is found in the folder `PlantModelLib`. The folder tree looks as follows and contains the following files:  
+In the following, we describe this in more detail using the existing plant model concept `Bettina`. As part of the plant models, `Bettina` is located in the `PlantModelLib` folder. The folder tree looks as like this:  
 
 pyMANGA  
  ┣ PlantModelLib  
