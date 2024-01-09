@@ -52,6 +52,11 @@ In the following, we describe how to install the following software
 
 Because the installation differs between operating systems, please select your operating system below.
 
+> **Choosing the correct Python version:**  
+> pyMANGA is tested with Python 3.7 and Python 3.11.  
+> While current testing indicates that you may be fine using the latest stable release,
+> we recommend using Python 3.11. at this point to avoid any unforeseen version related issues.
+
 ### 3.1 Ubuntu
 
 <details>
@@ -154,11 +159,11 @@ In the drop-down menu under ***Download*** you will find the current release ver
 <figure class="alert">
      <img id="Figure_3" src="/pictures/getting_started/installation_of_pymanga/download_python_windows_2.jpg" title="Figure 3: Select Python version 3.7.x from the list of available releases.">
 	 <figcaption>
-     	<i><br><strong>Figure 3:</strong> Select Python version 3.7.x from the list of available releases.</i>
+     	<i><br><strong>Figure 3:</strong> Select a stable Python release from the list of available releases. Please note: pyMANGA has only been tested with Python 3.7 and 3.11.</i>
      </figcaption>
 </figure>
 
-Execute the downloaded file (***python-3.7.7-amd64.exe***) like a normal Windows exe and install it on your computer (see <a href="/docs/getting_started/installation/#Figure_4">Figure 4</a>). 
+Open the downloaded file (***python-3.xx.xx-amd64.exe***) and install it on your computer (see <a href="/docs/getting_started/installation/#Figure_4">Figure 4</a>). 
 
 <figure class="alert">
      <img id="Figure_4" src="/pictures/getting_started/installation_of_pymanga/installation_python_windows.jpg" title="Figure 4: Run the downloaded file and install python by following the instructions.">
@@ -193,7 +198,7 @@ In the command prompt navigate to your pyMANGA folder by using the `cd` command.
 
 Pip lets us install all modules that are listed in the requirement file with one line of code. This might take a couple minutes. Type or copy the following code into the **command prompt** to start the installation (see <a href="/docs/getting_started/installation/#Figure_6">Figure 6</a>).  
 
-	py -3.7 -m pip install -r requirements.txt
+	py -m pip install -r requirements.txt
 
 <figure class="alert">
      <img id="Figure_6" src="/pictures/getting_started/installation_of_pymanga/install_packages_windows.png" title="Figure 6: Install the needed python packages using the command prompt.">
@@ -211,7 +216,7 @@ Now the preparations for using the **compiler** are finished.
 <summary>Further explanations</summary>
 
 - `cd` is short for **change directories** and is used to navigate to a specific folder.  
-- `py` means you are calling **Python**. Where `-3.7` is the version you are using.
+- `py` means you are calling **Python**. If you have multiple versions of Python installed on your computer, you can use e.g. `py -3.7` to call Python 3.7.
 - `-m` means you are calling a module, in this case `pip`, which is used to `install` other **modules**.
 - The `-r` flag tells `pip` to read the **requirements** file and install all modules listed in it.
   
