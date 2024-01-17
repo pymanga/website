@@ -120,6 +120,6 @@ If code you add to a file looks drastically different from the existing code aro
 
 OK, enough writing about writing code; the code itself is much more interesting.
 You might be interested in checking out a good reference. 
-We would suggest to check **pyMANGA/TreeModelLib/BelowgroundCompetition/SymmetricZOI/SymmetricZoi.py as a reference**.
+We would suggest to check the belowground competition concept `SymmetricZOI.py` that can be found at [pyMANGA/ResourceLib/BelowGround/Individual/SymmetricZOI/](https://github.com/pymanga/pyMANGA/blob/master/ResourceLib/BelowGround/Individual/SymmetricZOI/SymmetricZOI.py).  
 Have fun!
 
