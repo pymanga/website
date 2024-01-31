@@ -24,6 +24,5 @@ pyMANGA
 Plant modules are initialized in `iniPlantDynamicConcept` of `/PopulationLib/PlantGroup.py`. If the correct module is found, the corresponding plant module is imported. This is then parsed and processed with all other case queries in `ProjectLib/Project.py`. 
 
 Resource and ModelOutput modules are initialized in `ProjectLib/Project.py` .  
-Note that the class name of all modules is supposed to match the respective folder and file names.  
 
 For creating meaningful and working documentation, please refer to our [documentation guide](../documentation)  
