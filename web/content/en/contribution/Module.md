@@ -17,7 +17,13 @@ pyMANGA
  ┃ ┃ ┣ Bettina.md  
  ┃ ┃ ┗ Bettina.py  
 
-The file `__init__.py` is used to actually import the class that is implemented in `Bettina.py`. If possible, the filme `Bettina.md` contains the documentation of the module. However, at this point, pyMANGA does not now how to handle this module. pyMANGA checks for the state of all entries in the project file to determine which modules are used. This means, that the module needs to be added to the initialization part of pyMANGA where the xml tags are being processed to be able to check for the existence of e.g. plant module `Bettina`. Plant concepts are checked in `iniPlantDynamicConcept` of `/PopulationLib/Plant.py`. If the correct module is found, the appropriate plant model concept is imported. This is then parsed and processed along all other case queries in `ProjectLib/Project.py`. The case query can also be implemented directly in `Project.py` as is already done for example with the belowground resource concepts in `iniBelowgroundResourceConcept`.  
+- `__init__.py` is used to actually import the class that is implemented in `Bettina.py` as well as the non-technical documentation fo the module
+- `Bettina.md` contains the non-technical documentation of the module
+- `Bettina.py` contains the class `Bettina`
+
+Plant modules are initialized in `iniPlantDynamicConcept` of `/PopulationLib/PlantGroup.py`. If the correct module is found, the corresponding plant module is imported. This is then parsed and processed with all other case queries in `ProjectLib/Project.py`. 
+
+Resource and ModelOutput modules are initialized in `ProjectLib/Project.py` .  
 Overall, the final implementation of modules always depends on the exact use case and this guide aims to provide only a general workflow.  
 Note that the class name of all modules is supposed to match the respective folder and file names.  
 
