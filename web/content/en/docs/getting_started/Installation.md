@@ -115,28 +115,6 @@ To install all modules listed in the requirements file, you can use the followin
 
 	pip3 install -r requirements.txt
 
-After all missing modules are installed, restart **pyMANGA**.
-If all modules are installed successfully, you should get the following output:
-
-
-	Traceback (most recent call last):
-	  File "MANGA.py", line 26, in main
-	    prj = XMLtoProject(xml_project_file=project_file)
-	UnboundLocalError: local variable 'project_file' referenced before assignment
-	
-	During handling of the above exception, another exception occurred:
-	
-	Traceback (most recent call last):
-	  File "MANGA.py", line 38, in <module>
-	    main(sys.argv[1:])
-	  File "MANGA.py", line 28, in main
-	    raise UnboundLocalError('Wrong usage of pyMANGA. Type "python' +
-	UnboundLocalError: Wrong usage of pyMANGA. Type "python MANGA.py -h" for additional help.
-
-
-Even if you get this error message first, it means that **pyMANGA** is installed and works correctly.
-The calculation of a first example setup is explained in the section  <a href="/docs/getting_started/first_applications_of_pymanga/">First Applications of **pyMANGA**</a> of this short tutorial.
-
 </details>
 
 ### 3.2 Windows
@@ -238,7 +216,7 @@ There you can open the console by right-clicking and in the menu that opens, you
 
 By typing 
 
-	python3 MANGA.py
+	python3 MANGA.py -h
 
 the program will be started.
 
