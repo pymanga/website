@@ -44,9 +44,10 @@ For detailed information on the structure of control files see [Control File](/d
 
 ## 2 Setup with OpenGeoSys
 
-> Here, we explain how to run the complex pyMANGA setup 'OGS3D_SAZOI_BETTINA' from our [benchmark gallery](https://github.com/jbathmann/pyMANGA/tree/master/Benchmarks/ModuleBenchmarks/GrowthAndDeath/SimpleBettina).
-> More information on our benchmarks can be found [here](/docs/benchmarks/),
-> and a detailed OGS setup can be found [here](/docs/example_ogs_bettina/).
+> Here, we explain how to run the complex pyMANGA setup 'OGS3D_SAZOI_BETTINA' from our <a href="https://github.com/pymanga/pyMANGA/tree/master/Benchmarks/" target="_blank">benchmark gallery</a>.
+> More information on our benchmarks can be found <a href="https://pymanga.forst.tu-dresden.de/docs/benchmarks/" target="_blank">here</a>,
+> and a detailed OGS setup can be found <a href="https://pymanga.forst.tu-dresden.de/docs/example_ogs_bettina/" target="_blank">here</a>.
+
 
 This setup uses <a href="https://www.opengeosys.org/">**OpenGeoSys**</a> (OGS), which is a scientific open source project for the development of numerical methods for the simulation of thermo-hydro-mechanical-chemical (THMC) processes in porous and fragmented media.
 To use **OGS**, you need to download and install it.
@@ -54,20 +55,24 @@ Again the installation is different for windows and ubuntu.
 
 
 <details>
-<summary >First applications of pyMANGA with OGS in Ubuntu</summary>
+<summary >Installing OGS</summary>
 
-On this <a href="https://github.com/ufz/ogs/releases/tag/6.2.2">homepage</a> you will find several variants of OGS version 6.2.2 at the bottom of the page.
-Select the variant **"ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python--de-utils "** and download the compressed folder or use this [link](https://github.com/ufz/ogs/releases/download/6.2.2/ogs-6.2.2-Linux-5.3.4-arch1-1-ARCH-x64-python-de-utils.tar.gz) directly. 
+To use **OGS**, you have to download and install it first.
+pyMANGA has been tested with OGS version **6.4.0**.
+On this <a href="https://www.opengeosys.org/releases/6.4.0/" target="_blank">homepage</a> you will find several variants of OGS version 6.4.0.
+Select the variant with 'Python bindings' and 'Utilities'.
+
 **Please make sure that you download exactly this version of OGS.**
 
-Unzip the folder and move the three folders it contains (_bin_, _lib_ and _share_) seen from the pyMANGA main level to the following folder:
+Unzip the archive and move all folders it contains to:
 
-	./ResourceLib/BelowGround/OGS
+	./ResourceLib/BelowGround/Individual/OGS/
 
 The files must be located directly in this folder.
-To check if OGS is executable on your computer, open a terminal in the **pyMANGA** main level and enter the following:
 
-	./ResourceLib/BelowGround/OGS/bin/ogs
+To check if OGS is executable on your computer, open a terminal in the **pyMANGA** root directory and enter the following:
+
+	./ResourceLib/BelowGround/Individual/OGS/bin/ogs.exe
 
 If OGS runs correctly, you will get the following output:
 
@@ -79,87 +84,27 @@ If OGS runs correctly, you will get the following output:
 	          [--config-warnings-nonfatal] [-l <LOG_LEVEL>] [-o <PATH>] [-r
 	          <PATH>] [--] [--version] [-h] <PROJECT_FILE>
 
-If this does not work, first check if you have installed the Python module "vtk" in version 8.1.2.
-Please also read the <a href="/en/docs/first_steps/installation#Installation_Ubuntu">section on installing pyMANGA in Ubuntu</a>.
-If you encounter insurmountable problems at this point <a href="/en/impressum">contact</a> us.
+If this does not work, first check if you have installed the Python module "vtk" in version 9.2.2.
 
+Please read the section about <a href="https://pymanga.forst.tu-dresden.de/docs/getting_started/installation/" target="_blank">installing pyMANGA</a> on Ubuntu. 
+If you encounter insurmountable problems at this point, please <a href="https://github.com/pymanga/pyMANGA/issues/new" target="_blank">contact us</a>.
 
-Now you can start the next application example by opening a terminal in the **pyMANGA** main level and entering the following command:
-
-	python3 MANGA.py -i Benchmarks/ExampleSetups/OGSExampleSetup/OGS3D_SAZOI_BETTINA.xml
 
 </details>
 
 <details>
-<summary>First applications of pyMANGA with OGS in Windows</summary>
+<summary>First applications of pyMANGA with OGS</summary>
 
-To use **OGS** you have to download and install it first.
-To do so, go to the following [website](https://www.opengeosys.org/releases/ "https://www.opengeosys.org/releases/") and scroll down until you find **version 6.4.0** and download it (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_2">Figure 2</a> and <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_3">Figure 3</a>).
+By opening a terminal in the pyMANGA main level and entering the following command, you can start the next application example:
 
-<figure class="alert">
-     <img id="Figure_2" src="/pictures/getting_started/first_applications_of_pymanga/version_ogs_windows.jpg" title="Figure 2: OGS version selection">
-	 <figcaption>
-     	<i><br><strong>Figure 2:</strong> OGS version selection.</i>
-     </figcaption>
-</figure>
-</figure>
+	python3 MANGA.py -i Benchmarks/ExampleSetups/OGSExampleSetup/OGS3D_SAZOI_BETTINA.xml
+or
 
-<figure class="alert">
-     <img id="Figure_3" src="/pictures/getting_started/first_applications_of_pymanga/download_ogs_windows.jpg" title="Figure 3: Make sure to select the correct version including Python bindings.">
-	 <figcaption>
-     	<i><br><strong>Figure 3:</strong> Make sure to select the correct version including Python bindings.</i>
-     </figcaption>
-</figure>
+	py MANGA.py -i Benchmarks/ExampleSetups/OGSExampleSetup/OGS3D_SAZOI_BETTINA.xml
 
 
-Select the file to be downloaded according to your operating system.
-Then unzip the zip file, copy the ***bin*** folder and paste it into the ***pyMANGA-master*** folder in the following path (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_4">Figure 4</a>).
-
-	pyMANGA-master\ResourceLib\BelowGround\OGS
-
-<figure class="alert">
-     <img id="Figure_4" src="/pictures/getting_started/first_applications_of_pymanga/ogs_path.jpg" title="Figure 4: OGS location within pyMANGA.">
-	 <figcaption>
-     	<i><br><strong>Figure 4:</strong> OGS location within pyMANGA.</i>
-     </figcaption>
-</figure>
-
-
-**OGS** is now installed. To test if it works properly, open the ***_Bin_*** folder, press **shift** and the **right mouse button** and select **Open PowerShell window here** (see Figure <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_5">Figure 5</a>).
-
-<figure class="alert">
-     <img id="Figure_5" src="/pictures/getting_started/first_applications_of_pymanga/ogs_powershell.jpg" title="Figure 5: Open PowerShell in the correct location with shift+right click.">
-	 <figcaption>
-     	<i><br><strong>Figure 5:</strong> Open PowerShell in the correct location with shift+right click.</i>
-     </figcaption>
-</figure>
-
-
-Copy the path that appears in the **PowerShell window** and append ***\OGS*** and press Enter.
-The following <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_6">Figure 6</a> shows the PowerShell window output when OGS is running smoothly. 
-
-<figure class="alert">
-     <img id="Figure_6" src="/pictures/getting_started/first_applications_of_pymanga/output_ogs_runs.jpg" title="Figure 6: If your PowerShell output looks like this, OGS is installed properly.">
-	 <figcaption>
-     	<i><br><strong>Figure 6:</strong> If your PowerShell output looks like this, OGS is installed properly.</i>
-     </figcaption>
-</figure>
-
-Now you can start the next application example by opening the command prompt in the ***pyMANGA-master*** folder and starting pyMANGA as usual.
-Then enter the following command (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_7">Figure 7</a>).
-
-	py -3.7 MANGA.py -i \Benchmarks\ExampleSetups\OGSExampleSetup\OGS3D_SAZOI_BETTINA.xml
-
-<figure class="alert">
-     <img id="Figure_7" src="/pictures/getting_started/first_applications_of_pymanga/run_ogs_sample_setup.jpg" title="Figure 7: Example run of pyMANGA with OGS enabled.">
-	 <figcaption>
-     	<i><br><strong>Figure 7:</strong> Example run of pyMANGA with OGS enabled.</i>
-     </figcaption>
-</figure>
-
-
-Note: The computing time can take several hours.
-You can reduce this by opening 
+Note: The computation time when using OGS can take several hours.
+You can reduce this time by opening 
 
 ***.\Benchmarks\ExampleSetups\OGSExampleSetup\OGS3D_SAZOI_BETTINA.xml*** 
 
@@ -167,17 +112,9 @@ and changing the line 22 to
 
 	<delta_t_ogs> 604800 </delta_t_ogs>
 
-This is the time step length, which indicates how long the groundwater flow model calculates before the rest of the BETTINA time step is extrapolated, given in seconds.
-
-From the results the pore-water distribution is extrapolated under steady state assumptions.
-Consequently, this parameter has to be used very carefully but is a means to significantly reduce computing time (see <a href="/docs/getting_started/first_applications_of_pymanga/#Figure_8">Figure 8</a>).
-
-<figure class="alert">
-     <img id="Figure_8" src="/pictures/getting_started/first_applications_of_pymanga/set_timestep_length.jpg" title="Figure 8: You can modify the time step length to reduce runtime (line 22).">
-	 <figcaption>
-     	<i><br><strong>Figure 8:</strong> You can modify the time step length to reduce runtime (line 22).</i>
-     </figcaption>
-</figure>
+This is the time step length (in seconds) that indicates how long the groundwater flow model calculates before extrapolating the rest of the BETTINA time step.
+From the results, the pore water distribution is extrapolated under steady state assumptions.
+Therefore, this parameter must be used very carefully, but it is a means to significantly reduce the computation time.
 
 </details>
 
