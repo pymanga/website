@@ -27,7 +27,7 @@ weight: 2
         <div class="row">
             <div class="col-12 col-lg-7">
                 <img class="img-fluid img-thumbnail"
-                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/mascot.png/@@images/b9316002-2fdf-4ed9-881a-20d6d77d5083.png"/>
+                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/mascot.png/@@images/0a1d9a0e-b999-46ed-9d9f-0ddbb4806ad6.png"/>
             </div>
             <div class="col d-flex align-items-center">
                 <div>
@@ -57,7 +57,7 @@ weight: 2
         <div class="row">
             <div class="col-12 col-md-auto">
                 <img class="img-fluid img-thumbnail"
-                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/tree_network_plot.png/@@images/e3519aa8-4abc-448d-9ea0-8d74d6275094.png"/>
+                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/tree_network_plot.png/@@images/9ef871d5-a203-4f58-82d8-196d4de08eb1.png"/>
             </div>
             <div class="col d-flex align-items-center">
                 <div>
@@ -68,6 +68,7 @@ weight: 2
                     <h3>Publications</h3>
                     <p>
                         <a href="https://doi.org/10.1093/aob/mcac074" target="_blank">Wimmler et al. 2022</a><br>
+                        <a href="https://doi.org/10.1016/j.envsoft.2024.105973" target="_blank">Wimmler et al. 2024</a><br>
                     </p>
                 </div>
             </div>
@@ -88,7 +89,7 @@ weight: 2
         <div class="row">
             <div class="col-12 col-lg-7">
                 <img class="img-fluid img-thumbnail" 
-                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/MARZIPAN.jpg/@@images/0a149582-324b-4039-b5ff-ae39e5c96402.jpeg"/>
+                     src="https://tu-dresden.de/bu/umwelt/forst/ww/bsa/ressourcen/bilder/Projekte/MARZIPAN.jpg/@@images/920fac4c-abcc-4aaf-8070-ad0100ce21e9.jpeg"/>
             </div>
             <div class="col d-flex align-items-center">
                 <div>
